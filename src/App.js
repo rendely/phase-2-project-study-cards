@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
+
 function App() {
+  const [cards, setCards] = useState(undefined);
+
+  async function getCards(){
+    const response = await fetch('http://localhost:3001/cards');
+    const data = await response.json();
+    setCards(data);
+  }
+  
+  if (!cards) getCards();
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Study Cards
       </header>
+      <main>
+        <div>
+       {cards ? cards.map(card => <div key={card.name}>{card.name}</div>) : 'no cards yet'}
+        </div>
+      </main>
     </div>
   );
 }
