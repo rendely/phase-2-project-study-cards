@@ -20,8 +20,11 @@ function Collections() {
         {collections.map(collection =>
           <Grid.Column key={collection.id}>
             <Card fluid>
-              <Card.Content textAlign={'center'}>
+              <Card.Content textAlign='center'>
                 <h3><Link to={`/collections/${collection.id}`} >{collection.name}</Link></h3>
+              </Card.Content>
+              <Card.Content meta textAlign='center'>
+                100 Cards
               </Card.Content>
             </Card>
           </Grid.Column>
@@ -29,7 +32,7 @@ function Collections() {
       </Grid>
       </Container>
       <Container textAlign='center' style={{ padding: "40px" }}>
-        <Button color={'green'}>Add Collection</Button>
+        <Button color='green'>Add Collection</Button>
       </Container>
     </Layout>)
 }

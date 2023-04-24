@@ -31,10 +31,10 @@ function Collection() {
           {cards.map(card =>
             <Grid.Column key={card.id}>
               <Card fluid >
-                <Card.Content textAlign={'center'} style={{ backgroundColor: "lightgray" }}>
+                <Card.Content textAlign='center' style={{ backgroundColor: "lightgray" }}>
                   {card.question}
                 </Card.Content>
-                <Card.Content textAlign={'center'}>
+                <Card.Content textAlign='center'>
                   {card.answer}
                 </Card.Content>
               </Card>
@@ -44,7 +44,7 @@ function Collection() {
       </Container>
       <Container textAlign='center' style={{ padding: "40px" }}>
         <Link to='./add'>
-        <Button color={'green'}>Add Card</Button>
+        <Button color='green'>Add Card</Button>
         </Link>
       </Container>
     </Layout>)

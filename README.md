@@ -7,7 +7,8 @@ Study Cards is a simple application that lets you create and practice with digit
 ## Feature backlog
 
 - Create and manage multiple decks of study cards (create new deck, manage cards in deck, rename deck, delete deck)
-- Inside a deck, create and manage the specific study cards
+- The view showing all the decks should also show how many cards, and what % are known.
+- Inside a deck, create and manage (edit, delete) the specific study cards
 - For each card you can add text to both a question and answer section
 - Start a study session which will fetch cards that require practice (based on last answer time and correct/incorrect answer)
 - During a study session you see one card a time, after revealing the answer you can mark if you got it right or wrong
