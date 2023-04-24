@@ -1,28 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import { Card, Grid, Progress } from 'semantic-ui-react'
 import Layout from './Layout';
 import 'semantic-ui-css/semantic.min.css'
 import './App.css';
+import Home from './Home';
 import Collections from './Collections';
+import Collection from './Collection';
 
 
 function App() {
-  const [cards, setCards] = useState([]);
-
-  function getCards() {
-    fetch('http://localhost:3001/cards')
-      .then(r => r.json())
-      .then(d => setCards(d))
-  }
-
-  useEffect(getCards, [])
-
   return (
     <Routes>
-    <Route path="/" element={<Layout>Home</Layout>} />
-    <Route path="/collections" element={<Layout><Collections /></Layout>} />
-    <Route path="/collections/:id" element={<Layout>Specific Collection: </Layout>} />
+    <Route path="/" element={<Home></Home>} />
+    <Route path="/collections" element={<Collections />} />
+    <Route path="/collections/:id" element={<Collection />} />
   </Routes> 
   )
 }
