@@ -83,6 +83,36 @@
       "question": "What is a template literal?",
       "answer": "A template literal is a string literal that can contain expressions.",
       "collectionId": 1
+    },
+    {
+      "id": 12,
+      "question": "What does HTML stand for?",
+      "answer": "HTML stands for HyperText Markup Language.",
+      "collectionId": 3
+    },
+    {
+      "id": 13,
+      "question": "What is the purpose of the <!DOCTYPE> declaration?",
+      "answer": "The <!DOCTYPE> declaration defines the document type and version of HTML being used, helping the browser render the page correctly.",
+      "collectionId": 3
+    },
+    {
+      "id": 14,
+      "question": "What are the main structural elements of an HTML document?",
+      "answer": "The main structural elements of an HTML document are the <!DOCTYPE> declaration, <html> element, <head> element, and <body> element.",
+      "collectionId": 3
+    },
+    {
+      "id": 15,
+      "question": "What is the purpose of the <head> element in an HTML document?",
+      "answer": "The <head> element contains meta information about the document, such as the title, character encoding, and links to stylesheets or scripts.",
+      "collectionId": 3
+    },
+    {
+      "id": 16,
+      "question": "What is the purpose of the <body> element in an HTML document?",
+      "answer": "The <body> element contains the main content of the web page, including text, images, links, and multimedia.",
+      "collectionId": 3
     }
   ]
 }
