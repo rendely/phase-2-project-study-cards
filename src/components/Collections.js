@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Container, Grid } from 'semantic-ui-react'
+import { Button, Card, Container, Grid } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Layout from './Layout'
 
 function Collections() {
-  
+
   const [collections, setCollections] = useState([]);
   useEffect(getCollections, []);
   function getCollections() {
@@ -15,17 +15,20 @@ function Collections() {
 
   return (
     <Layout>
-    <Grid columns={4} doubling>
-      {collections.map(collection =>
-        <Grid.Column key={collection.id}>
-          <Card fluid >
-            <Card.Content textAlign={'center'}>
-              <Link to={`/collections/${collection.id}`} >{collection.name}</Link>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-      )}
-    </Grid>
+      <Grid columns={4} doubling>
+        {collections.map(collection =>
+          <Grid.Column key={collection.id}>
+            <Card fluid >
+              <Card.Content textAlign={'center'}>
+                <Link to={`/collections/${collection.id}`} >{collection.name}</Link>
+              </Card.Content>
+            </Card>
+          </Grid.Column>
+        )}
+      </Grid>
+      <Container textAlign='center' style={{ padding: "40px" }}>
+        <Button color={'green'}>Add Collection</Button>
+      </Container>
     </Layout>)
 }
 
