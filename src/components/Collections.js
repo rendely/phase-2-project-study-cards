@@ -7,6 +7,7 @@ import CollectionCard from './CollectionCard';
 function Collections() {
 
   const [collections, setCollections] = useState([]);
+  
   useEffect(getCollections, []);
   function getCollections() {
     fetch('http://localhost:3001/collections')

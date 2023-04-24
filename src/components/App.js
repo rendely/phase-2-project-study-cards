@@ -10,13 +10,14 @@ import Review from './Review';
 
 
 function App() {
+
   return (
-    <Routes>
-    <Route path="/" element={<Home></Home>} />
+    <Routes>    
     <Route path="/collections" element={<Collections />} />
     <Route path="/collections/:id" element={<Collection />} />
     <Route path="/collections/:id/add" element={<CardForm />} />
     <Route path="/review" element={<Review />} />
+    <Route path="/" element={<Home />} />
   </Routes> 
   )
 }
