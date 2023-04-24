@@ -18,7 +18,7 @@ function CollectionCard({collection}){
     <Card.Content textAlign='center'>
       <h3><Link to={`/collections/${collection.id}`} >{collection.name}</Link></h3>
     </Card.Content>
-    <Card.Content meta textAlign='center'>
+    <Card.Content textAlign='center'>
       {cards.length} Cards
     </Card.Content>
   </Card>

@@ -30,6 +30,7 @@ function Collection() {
         <Grid columns={numColumns} >
           {cards.map(card =>
             <Grid.Column key={card.id}>
+               {/* TODO: break into own component  */}
               <Card fluid >
                 <Card.Content textAlign='center' style={{ backgroundColor: "lightgray" }}>
                   {card.question}
