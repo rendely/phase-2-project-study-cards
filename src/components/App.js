@@ -4,6 +4,8 @@ import { Card, Grid, Progress } from 'semantic-ui-react'
 import Layout from './Layout';
 import 'semantic-ui-css/semantic.min.css'
 import './App.css';
+import Collections from './Collections';
+
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -19,8 +21,8 @@ function App() {
   return (
     <Routes>
     <Route path="/" element={<Layout>Home</Layout>} />
-    <Route path="/collections" element={<Layout>All Collections</Layout>} />
-    <Route path="/collections/:id" element={<Layout>Collection: </Layout>} />
+    <Route path="/collections" element={<Layout><Collections /></Layout>} />
+    <Route path="/collections/:id" element={<Layout>Specific Collection: </Layout>} />
   </Routes> 
   )
 }

@@ -1,15 +1,8 @@
 {
-  "cards":[
-    {"name": "John", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Gale", "body": "Hello there"},
-    {"name": "Fermi", "body": "Hello there"}
+  "collections":[
+    {"id": 1, "name": "Javascript"},
+    {"id": 2, "name": "CSS"},
+    {"id": 3, "name": "HTML"},
+    {"id": 4, "name": "React"}
   ]
 }
