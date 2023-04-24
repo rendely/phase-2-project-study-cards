@@ -5,6 +5,7 @@ import Layout from './Layout'
 
 function Collection() {
   const params = useParams();
+  const numColumns = Math.floor(window.innerWidth / 300);
   
   const [cards, setCards] = useState([]);
   const [collectionName, setCollectionName] = useState('');
@@ -25,7 +26,7 @@ function Collection() {
   
   return (
     <Layout collectionName={collectionName}>
-    <Grid columns={3} stacking>
+    <Grid columns={numColumns} >
       {cards.map(card =>
         <Grid.Column key={card.id}>
           <Card fluid >
