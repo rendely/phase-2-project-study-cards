@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Container, Grid } from 'semantic-ui-react'
+import { Button, Card, Container, Grid } from 'semantic-ui-react'
 import { useParams} from 'react-router-dom'
 import Layout from './Layout'
 
@@ -40,6 +40,9 @@ function Collection() {
         </Grid.Column>
       )}
     </Grid>
+    <Container textAlign='center' style={{ padding: "40px" }}>
+        <Button color={'green'}>Add Card</Button>
+      </Container>
     </Layout>)
 }
 
