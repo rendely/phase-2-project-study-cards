@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Container, Grid } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import { Button, Container, Grid } from 'semantic-ui-react'
 import Layout from './Layout'
+import CollectionCard from './CollectionCard';
+
 
 function Collections() {
 
@@ -17,16 +18,10 @@ function Collections() {
     <Layout>
       <Container>
       <Grid columns={4} doubling>
+        {/* TODO: Refactor into its own component? */}
         {collections.map(collection =>
           <Grid.Column key={collection.id}>
-            <Card fluid>
-              <Card.Content textAlign='center'>
-                <h3><Link to={`/collections/${collection.id}`} >{collection.name}</Link></h3>
-              </Card.Content>
-              <Card.Content meta textAlign='center'>
-                100 Cards
-              </Card.Content>
-            </Card>
+            <CollectionCard collection={collection} />           
           </Grid.Column>
         )}
       </Grid>

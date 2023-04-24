@@ -10,8 +10,8 @@ function Collection() {
   const [cards, setCards] = useState([]);
   const [collectionName, setCollectionName] = useState('');
 
-  useEffect(getCards, [params]);
-  useEffect(getCollectionInfo, [params]);
+  useEffect(getCards, []);
+  useEffect(getCollectionInfo, []);
 
   function getCards() {
     fetch('http://localhost:3001/cards?collectionId=' + params.id)

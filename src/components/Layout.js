@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Container, Menu } from 'semantic-ui-react'
 
 function Layout({ children, collectionName }) {
