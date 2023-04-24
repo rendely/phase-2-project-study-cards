@@ -24,10 +24,19 @@ function CardForm() {
       })
   }
 
-  function handleChange(e){
+  function handleChange(e, d){
+    let key, val;
+    if (e.name) {
+      key = e.target.name;
+      val = e.target.value;
+    }else if (d) {
+      key = d.name;
+      val = d.value;
+    }
     setFormData({...formData,
-    [e.target.name]: e.target.value});
+    [key]: val});
   }
+  
   function handleSubmit(e){
     e.preventDefault();
     fetch('http://localhost:3001/cards', {
@@ -61,6 +70,8 @@ function CardForm() {
         <Dropdown
         fluid
         selection
+        name='collectionId'
+        id='collectionIdTest'
         options={collectionOptions}
         value={formData.collectionId}
         onChange={handleChange}
