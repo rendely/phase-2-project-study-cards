@@ -14,7 +14,7 @@ function Collections() {
   }
 
   return (
-    <Layout collectionName={'Hello'}>
+    <Layout>
     <Grid columns={4} doubling>
       {collections.map(collection =>
         <Grid.Column key={collection.id}>

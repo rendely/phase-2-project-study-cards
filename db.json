@@ -4,5 +4,9 @@
     {"id": 2, "name": "CSS"},
     {"id": 3, "name": "HTML"},
     {"id": 4, "name": "React"}
+  ],
+  "cards":[
+    {"id": 1, "question": "What is the method to find all DOM elements?", "answer": "querySelectorAll", "collectionId": 1},
+    {"id": 2, "question": "How would you select <div id='hello' />?", "answer": "#hello", "collectionId": 2}
   ]
 }
