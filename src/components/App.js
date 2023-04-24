@@ -5,6 +5,7 @@ import './App.css';
 import Home from './Home';
 import Collections from './Collections';
 import Collection from './Collection';
+import CardForm from './CardForm';
 import Review from './Review';
 
 
@@ -14,6 +15,7 @@ function App() {
     <Route path="/" element={<Home></Home>} />
     <Route path="/collections" element={<Collections />} />
     <Route path="/collections/:id" element={<Collection />} />
+    <Route path="/collections/:id/add" element={<CardForm />} />
     <Route path="/review" element={<Review />} />
   </Routes> 
   )

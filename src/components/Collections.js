@@ -15,17 +15,19 @@ function Collections() {
 
   return (
     <Layout>
+      <Container>
       <Grid columns={4} doubling>
         {collections.map(collection =>
           <Grid.Column key={collection.id}>
-            <Card fluid >
+            <Card fluid>
               <Card.Content textAlign={'center'}>
-                <Link to={`/collections/${collection.id}`} >{collection.name}</Link>
+                <h3><Link to={`/collections/${collection.id}`} >{collection.name}</Link></h3>
               </Card.Content>
             </Card>
           </Grid.Column>
         )}
       </Grid>
+      </Container>
       <Container textAlign='center' style={{ padding: "40px" }}>
         <Button color={'green'}>Add Collection</Button>
       </Container>
