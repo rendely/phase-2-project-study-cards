@@ -1,12 +1,88 @@
 {
-  "collections":[
-    {"id": 1, "name": "Javascript"},
-    {"id": 2, "name": "CSS"},
-    {"id": 3, "name": "HTML"},
-    {"id": 4, "name": "React"}
+  "collections": [
+    {
+      "id": 1,
+      "name": "Javascript"
+    },
+    {
+      "id": 2,
+      "name": "CSS"
+    },
+    {
+      "id": 3,
+      "name": "HTML"
+    },
+    {
+      "id": 4,
+      "name": "React"
+    }
   ],
-  "cards":[
-    {"id": 1, "question": "What is the method to find all DOM elements?", "answer": "querySelectorAll", "collectionId": 1},
-    {"id": 2, "question": "How would you select <div id='hello' />?", "answer": "#hello", "collectionId": 2}
+  "cards": [
+    {
+      "id": 1,
+      "question": "What is the method to find all DOM elements?",
+      "answer": "querySelectorAll",
+      "collectionId": 1
+    },
+    {
+      "id": 2,
+      "question": "How would you select <div id='hello' />?",
+      "answer": "#hello",
+      "collectionId": 2
+    },
+    {
+      "id": 3,
+      "question": "What is the interpolation operator?",
+      "answer": "The interpolation operator is used to insert the value of an expression into a string.",
+      "collectionId": 1
+    },
+    {
+      "id": 4,
+      "question": "What is escaping?",
+      "answer": "Escaping is the process of inserting special characters into a string so that they are not interpreted as special characters.",
+      "collectionId": 1
+    },
+    {
+      "id": 5,
+      "question": "What is a boolean?",
+      "answer": "A boolean is a data type that can have one of two values: true or false.",
+      "collectionId": 1
+    },
+    {
+      "id": 6,
+      "question": "What is the difference between a variable declaration and an expression?",
+      "answer": "A variable declaration is a statement that creates a new variable. An expression is a unit of code that evaluates to a value.",
+      "collectionId": 1
+    },
+    {
+      "id": 7,
+      "question": "What is the difference between a constant and a variable?",
+      "answer": "A constant is a variable that cannot be changed. A variable can be changed.",
+      "collectionId": 1
+    },
+    {
+      "id": 8,
+      "question": "What is the difference between let and const?",
+      "answer": "The difference between let and const is that let can be reassigned, but const cannot.",
+      "collectionId": 1
+    },
+    {
+      "id": 9,
+      "question": "What are reserved words in JavaScript?",
+      "answer": "Reserved words are words that have a special meaning in JavaScript. They cannot be used as variable names or as identifiers.",
+      "collectionId": 1
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between null and undefined?",
+      "answer": "The difference between null and undefined is that null is a value that explicitly means \"nothing\", while undefined is a value that means \"not defined\".",
+      "collectionId": 1
+    },
+    {
+      "id": 11,
+      "question": "What is a template literal?",
+      "answer": "A template literal is a string literal that can contain expressions.",
+      "collectionId": 1
+    }
   ]
 }

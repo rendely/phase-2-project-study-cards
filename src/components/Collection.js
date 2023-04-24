@@ -5,8 +5,7 @@ import Layout from './Layout'
 
 function Collection() {
   const params = useParams();
-  console.log(params.id);
-
+  
   const [cards, setCards] = useState([]);
   const [collectionName, setCollectionName] = useState('');
 
@@ -23,14 +22,14 @@ function Collection() {
     .then(r => r.json())
     .then(collections => setCollectionName(collections[0].name))
   }
-
+  
   return (
     <Layout collectionName={collectionName}>
-    <Grid columns={4} doubling>
+    <Grid columns={3} stacking>
       {cards.map(card =>
         <Grid.Column key={card.id}>
           <Card fluid >
-            <Card.Content textAlign={'center'}>
+            <Card.Content textAlign={'center'} style={{backgroundColor: "lightgray"}}>
               {card.question}
             </Card.Content>
             <Card.Content textAlign={'center'}>
