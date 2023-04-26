@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import Layout from './Layout'
 import CardForm from './CardForm'
 
+
 function CollectionDetail() {
   const params = useParams();
   const numColumns = Math.floor(window.innerWidth / 300);
@@ -50,12 +51,16 @@ function CollectionDetail() {
                 <Card.Content>
                   {card.answer}
                 </Card.Content>
+                <Button.Group basic compact className={'hidden'}>
+                <Button compact onClick={()=> console.log('edit')}>Edit</Button>
+                <Button compact onClick={()=> console.log('archive')}>Archive</Button>
+              </Button.Group>
               </Card>
             </Grid.Column>
           )}
 
         </Grid>
-        <Grid centered columns={4} doubling>
+        <Grid centered columns={numColumns} doubling>
           <Grid.Column>
             <Card fluid style={{ height: "100%" }}>
               <Card.Content>
