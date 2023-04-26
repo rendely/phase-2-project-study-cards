@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Button, Form, TextArea } from 'semantic-ui-react'
+import { Button, Form, Input } from 'semantic-ui-react'
 
-function CardForm({onAddCard}) {
+function CollectionForm({onAddCollection}) {
 
   const formDataEmpty = {
-    question: '',
-    answer: ''
+    name: ''
   };
 
   const [formData, setFormData] = useState(formDataEmpty)
@@ -27,7 +26,7 @@ function CardForm({onAddCard}) {
   
   function handleSubmit(e){
     e.preventDefault();
-    onAddCard(formData);
+    onAddCollection(formData);
     setFormData(formDataEmpty);
   }
 
@@ -35,17 +34,13 @@ function CardForm({onAddCard}) {
     <div>
       <Form onSubmit={handleSubmit}>
         <Form.Field>
-        <label>Question:</label>
-          <TextArea name='question' placeholder='Add your question' onChange={handleChange} value={formData.question}></TextArea>
+        <label>Name:</label>
+          <Input name='name' placeholder='Add your question' onChange={handleChange} value={formData.name}></Input>
         </Form.Field>
-        <Form.Field>
-        <label>Answer:</label>
-          <TextArea name='answer' placeholder='Add your answer' onChange={handleChange} value={formData.answer}></TextArea>
-        </Form.Field>
-        <Button color={'green'} type='submit'>Add Card</Button>
+        <Button color={'green'} type='submit'>Add Collection</Button>
       </Form>
     </div>)
 }
 
-export default CardForm
+export default CollectionForm
 

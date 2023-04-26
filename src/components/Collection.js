@@ -55,7 +55,7 @@ function Collection() {
           )}
 
         </Grid>
-        <Grid centered columns={2}>
+        <Grid centered columns={4} doubling>
           <Grid.Column>
             <Card fluid style={{ height: "100%" }}>
               <Card.Content>
