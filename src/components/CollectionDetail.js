@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import Layout from './Layout'
 import CardForm from './CardForm'
 
-function Collection() {
+function CollectionDetail() {
   const params = useParams();
   const numColumns = Math.floor(window.innerWidth / 300);
 
@@ -69,5 +69,5 @@ function Collection() {
     </Layout>)
 }
 
-export default Collection
+export default CollectionDetail
 
