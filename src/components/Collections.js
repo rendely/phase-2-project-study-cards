@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Button, Container, Grid } from 'semantic-ui-react'
+import { Button, Header, Icon, Card, Container, Grid, Modal } from 'semantic-ui-react'
 import Layout from './Layout'
 import CollectionCard from './CollectionCard';
 import CollectionForm from './CollectionForm';
@@ -7,6 +7,7 @@ import CollectionForm from './CollectionForm';
 function Collections() {
 
   const [collections, setCollections] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(getCollections, []);
   function getCollections() {
@@ -15,7 +16,7 @@ function Collections() {
       .then(collections => setCollections(collections))
   }
 
-  function handleAddCollection(newCollection){
+  function handleAddCollection(newCollection) {
     const formData = newCollection;
     fetch('http://localhost:3001/collections', {
       method: "POST",
@@ -28,12 +29,38 @@ function Collections() {
 
   return (
     <Layout>
+      <Modal
+        basic
+        onClose={() => setShowModal(false)}
+        onOpen={() => setShowModal(true)}
+        open={showModal}
+        size='small'
+      >
+        <Header icon>
+          <Icon name='archive' />
+          Archive Old Messages
+        </Header>
+        <Modal.Content>
+          <p>
+            Are you sure you want to archive this collection?
+          </p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button basic color='red' inverted onClick={() => setShowModal(false)}>
+            <Icon name='remove' /> No
+          </Button>
+          <Button color='green' inverted onClick={() => setShowModal(false)}>
+            <Icon name='checkmark' /> Yes
+          </Button>
+        </Modal.Actions>
+
+      </Modal>
       <Container>
         <Grid columns={4} doubling>
           {/* TODO: Refactor into its own component? */}
           {collections.map(collection =>
             <Grid.Column key={collection.id}>
-              <CollectionCard collection={collection} />
+              <CollectionCard collection={collection} setShowModal={setShowModal} />
             </Grid.Column>
           )}
         </Grid>
@@ -49,7 +76,7 @@ function Collections() {
         </Grid>
 
       </Container>
-    </Layout>)
+    </Layout >)
 }
 
 export default Collections
