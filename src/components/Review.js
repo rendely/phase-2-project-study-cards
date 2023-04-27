@@ -6,12 +6,8 @@ import { Card, Container, Grid } from 'semantic-ui-react'
 function Review() {
 
   const [cards, setCards] = useState([]);
-  // const [currentCard, setCurrentCard] = useState({});
-
   const currentCard = cards[0];
-
   useEffect(loadCards,[])
-  // useEffect(() => setCurrentCard(cards[0]),[cards]);
 
   function loadCards(){
     console.log('loading');
@@ -19,8 +15,6 @@ function Review() {
       .then(r => r.json())
       .then(cards => setCards(cards.filter(card => card.needsReview)))
   }
-
-  console.log(cards);
 
   function updateCard(didGetIt){
     const formData = { needsReview: !didGetIt };

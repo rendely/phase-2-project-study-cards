@@ -4,17 +4,19 @@ import { Button, Card } from 'semantic-ui-react'
 function ReviewCard({ card, updateCard }) {
 
   const [showAnswer, setShowAnswer] = useState(false);
-
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
-    function handleKeyDown(e) {
-      if (e.code === 'ArrowDown') setShowAnswer(true)
-      if (e.code === 'ArrowRight') handleResult(true)
-      if (e.code === 'ArrowLeft') handleResult(false)
-    };
-  }, [])
+    return (() => document.removeEventListener('keydown', handleKeyDown));
+  }, [card]);
+
+  function handleKeyDown(e) {
+    if (e.code === 'ArrowDown') setShowAnswer(true)
+    else if (e.code === 'ArrowRight') handleResult(true)
+    else if (e.code === 'ArrowLeft') handleResult(false)
+  };
 
   function handleResult(didGetIt) {
+    console.log(card, didGetIt);
     updateCard(didGetIt);
     setShowAnswer(false);
   }
