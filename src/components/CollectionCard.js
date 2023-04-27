@@ -25,7 +25,7 @@ function CollectionCard({collection, setShowModal}){
     <Card.Content textAlign='center'>
       {cards.length} Cards
     </Card.Content>
-      <Button color={'gray'} onClick={handleArchive}>Archive</Button>
+      <Button  compact onClick={handleArchive}>Archive</Button>
   </Card>
   )
 }

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Container, Grid } from 'semantic-ui-react'
-import { useParams, Link } from 'react-router-dom'
+import { Card, Container, Divider, Grid } from 'semantic-ui-react'
+import { useParams } from 'react-router-dom'
 import Layout from './Layout'
 import CardForm from './CardForm'
+import StudyCard from './StudyCard'
 
 
 function CollectionDetail() {
@@ -44,22 +45,12 @@ function CollectionDetail() {
           {cards.map(card =>
             <Grid.Column key={card.id}>
               {/* TODO: break into own component  */}
-              <Card fluid style={{ height: "100%" }}>
-                <Card.Content style={{ backgroundColor: "lightgray" }}>
-                  {card.question}
-                </Card.Content>
-                <Card.Content>
-                  {card.answer}
-                </Card.Content>
-                <Button.Group basic compact className={'hidden'}>
-                <Button compact onClick={()=> console.log('edit')}>Edit</Button>
-                <Button compact onClick={()=> console.log('archive')}>Archive</Button>
-              </Button.Group>
-              </Card>
+             <StudyCard card={card} />
             </Grid.Column>
           )}
 
         </Grid>
+        <Divider />
         <Grid centered columns={numColumns} doubling>
           <Grid.Column>
             <Card fluid style={{ height: "100%" }}>

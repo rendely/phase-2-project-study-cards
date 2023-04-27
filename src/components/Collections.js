@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Header, Icon, Card, Container, Grid, Modal } from 'semantic-ui-react'
+import { Button, Divider, Header, Icon, Card, Container, Grid, Modal } from 'semantic-ui-react'
 import Layout from './Layout'
 import CollectionCard from './CollectionCard';
 import CollectionForm from './CollectionForm';
@@ -64,14 +64,10 @@ function Collections() {
             </Grid.Column>
           )}
         </Grid>
-
+        <Divider />
         <Grid centered columns={4} doubling>
           <Grid.Column>
-            <Card fluid style={{ height: "100%" }}>
-              <Card.Content>
-                <CollectionForm onAddCollection={handleAddCollection} />
-              </Card.Content>
-            </Card>
+            <CollectionForm onAddCollection={handleAddCollection} />
           </Grid.Column>
         </Grid>
 
