@@ -36,7 +36,7 @@ function StudyCard({ card, onUpdateCard, onArchiveCard }) {
   if (isBeingEdited) return <CardForm question={card.question} answer={card.answer} onSubmitCard={handleEdit}/>
   else return (
     <Card fluid style={{ height: "100%" }}>
-      <Card.Content style={{ backgroundColor: "lightgray" }}>
+      <Card.Content style={{ backgroundColor: "AliceBlue" }}>
         {card.question}
       </Card.Content>
       <Card.Content>

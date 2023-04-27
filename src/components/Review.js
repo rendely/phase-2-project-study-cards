@@ -15,7 +15,6 @@ function Review() {
           </Grid.Column>
         </Grid>
       </Container>
-
     </Layout>)
 }
 

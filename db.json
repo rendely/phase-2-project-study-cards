@@ -131,6 +131,12 @@
       "answer": "git add .",
       "collectionId": "5",
       "id": 18
+    },
+    {
+      "question": "How do you show your git commit history with one line per commit?",
+      "answer": "git log --oneline",
+      "collectionId": "5",
+      "id": 19
     }
   ]
 }
