@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Container, Divider, Grid } from 'semantic-ui-react'
 import { useParams } from 'react-router-dom'
+import { Card, Container, Divider, Grid } from 'semantic-ui-react'
 import Layout from './Layout'
 import CardForm from './CardForm'
 import StudyCard from './StudyCard'
 
-
 function CollectionDetail() {
+
   const params = useParams();
   const numColumns = Math.floor(window.innerWidth / 300);
-
   const [cards, setCards] = useState([]);
   const [collectionName, setCollectionName] = useState('');
 
@@ -21,6 +20,7 @@ function CollectionDetail() {
       .then(r => r.json())
       .then(cards => setCards(cards))
   }
+
   function getCollectionInfo() {
     fetch('http://localhost:3001/collections?id=' + params.id)
       .then(r => r.json())
@@ -44,11 +44,9 @@ function CollectionDetail() {
         <Grid columns={numColumns} >
           {cards.map(card =>
             <Grid.Column key={card.id}>
-              {/* TODO: break into own component  */}
-             <StudyCard card={card} />
+              <StudyCard card={card} />
             </Grid.Column>
           )}
-
         </Grid>
         <Divider />
         <Grid centered columns={numColumns} doubling>
@@ -60,10 +58,8 @@ function CollectionDetail() {
             </Card>
           </Grid.Column>
         </Grid>
-
       </Container>
     </Layout>)
 }
 
 export default CollectionDetail
-

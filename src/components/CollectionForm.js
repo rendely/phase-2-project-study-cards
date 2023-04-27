@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { Card, Button, Form, Input } from 'semantic-ui-react'
+import React, { useState } from 'react'
+import { Button, Card, Form, Input } from 'semantic-ui-react'
 
 function CollectionForm({ onAddCollection }) {
 
-  const formDataEmpty = {
-    name: ''
-  };
-
+  const formDataEmpty = { name: '' };
   const [formData, setFormData] = useState(formDataEmpty)
-
 
   function handleChange(e, d) {
     let key, val;
@@ -33,7 +28,6 @@ function CollectionForm({ onAddCollection }) {
   }
 
   return (
-
     <Card fluid style={{ height: "100%" }}>
       <Card.Content>
         <Form onSubmit={handleSubmit}>
@@ -49,4 +43,3 @@ function CollectionForm({ onAddCollection }) {
 }
 
 export default CollectionForm
-

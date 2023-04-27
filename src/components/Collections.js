@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Divider, Header, Icon, Card, Container, Grid, Modal } from 'semantic-ui-react'
+import { Button, Container, Divider, Grid, Header, Icon, Modal } from 'semantic-ui-react'
 import Layout from './Layout'
 import CollectionCard from './CollectionCard';
 import CollectionForm from './CollectionForm';
@@ -14,7 +14,11 @@ function Collections() {
   function getCollections() {
     fetch('http://localhost:3001/collections')
       .then(r => r.json())
-      .then(collections => setCollections(collections.filter(c => c.isArchived === false || c.isArchived === undefined)))
+      .then(collections => setCollections(
+        collections.filter(
+          c => c.isArchived === false || c.isArchived === undefined)
+      )
+      )
   }
 
   function handleAddCollection(newCollection) {
@@ -28,12 +32,12 @@ function Collections() {
       .then(newCollection => setCollections(collection => [...collection, newCollection]))
   }
 
-  function handleArchiveCollection(){
-    if (selectedCollectionId){
-      fetch('http://localhost:3001/collections/'+selectedCollectionId, {
+  function handleArchiveCollection() {
+    if (selectedCollectionId) {
+      fetch('http://localhost:3001/collections/' + selectedCollectionId, {
         method: "PATCH",
         headers: { "Content-type": "application/json" },
-        body: JSON.stringify({isArchived: true})
+        body: JSON.stringify({ isArchived: true })
       })
         .then(r => r.json())
         .then(newCollection => {
@@ -46,6 +50,7 @@ function Collections() {
 
   return (
     <Layout>
+
       <Modal
         basic
         onClose={() => setShowModal(false)}
@@ -55,7 +60,7 @@ function Collections() {
       >
         <Header icon>
           <Icon name='archive' />
-          Archive Old Messages
+          Archive collection?
         </Header>
         <Modal.Content>
           <p>
@@ -63,21 +68,23 @@ function Collections() {
           </p>
         </Modal.Content>
         <Modal.Actions>
-          <Button basic color='red' inverted onClick={() => setShowModal(false)}>
+          <Button basic color='gray' inverted onClick={() => setShowModal(false)}>
             <Icon name='remove' /> No
           </Button>
-          <Button color='green' inverted onClick={handleArchiveCollection}>
+          <Button color='red' inverted onClick={handleArchiveCollection}>
             <Icon name='checkmark' /> Yes
           </Button>
         </Modal.Actions>
-
       </Modal>
       <Container>
         <Grid columns={4} doubling>
-          {/* TODO: Refactor into its own component? */}
           {collections.map(collection =>
             <Grid.Column key={collection.id}>
-              <CollectionCard collection={collection} setShowModal={setShowModal} setSelectedCollectionId={setSelectedCollectionId} />
+              <CollectionCard
+                collection={collection}
+                setShowModal={setShowModal}
+                setSelectedCollectionId={setSelectedCollectionId}
+              />
             </Grid.Column>
           )}
         </Grid>
@@ -87,7 +94,6 @@ function Collections() {
             <CollectionForm onAddCollection={handleAddCollection} />
           </Grid.Column>
         </Grid>
-
       </Container>
     </Layout >)
 }
