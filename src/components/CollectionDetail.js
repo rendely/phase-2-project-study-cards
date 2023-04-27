@@ -18,7 +18,7 @@ function CollectionDetail() {
   function getCards() {
     fetch('http://localhost:3001/cards?collectionId=' + params.id)
       .then(r => r.json())
-      .then(cards => setCards(cards))
+      .then(cards => setCards(cards.filter(c => c.isArchived === false || c.isArchived === undefined)))
   }
 
   function getCollectionInfo() {
@@ -42,6 +42,10 @@ function CollectionDetail() {
     setCards(cards => cards.map(c => c.id === newCard.id ? newCard : c))
   }
 
+  function handleArchiveCard(id){
+    setCards(cards => cards.filter(c => c.id !== id))
+  }
+
   return (
     <Layout collectionName={collectionName}>
       <Container>
@@ -51,7 +55,7 @@ function CollectionDetail() {
           </Grid.Column>
           {cards.map(card =>
             <Grid.Column key={card.id}>
-              <StudyCard card={card} onUpdateCard={handleUpdateCard}/>
+              <StudyCard card={card} onUpdateCard={handleUpdateCard} onArchiveCard={handleArchiveCard}/>
             </Grid.Column>
           )}
         </Grid>

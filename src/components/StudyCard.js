@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Card } from 'semantic-ui-react'
 import CardForm from './CardForm'
 
-function StudyCard({ card, onUpdateCard }) {
+function StudyCard({ card, onUpdateCard, onArchiveCard }) {
 
   const [isBeingEdited, setIsBeingEdited] = useState(false);
 
@@ -19,6 +19,20 @@ function StudyCard({ card, onUpdateCard }) {
       })
   }
 
+  function handleArchive(){
+    fetch('http://localhost:3001/cards/'+card.id, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({isArchived: true})
+    })
+      .then(r=>r.json())
+      .then(updatedCard => {
+        onUpdateCard(updatedCard);
+        setIsBeingEdited(false);
+      })
+    onArchiveCard(card.id);
+  }
+
   if (isBeingEdited) return <CardForm question={card.question} answer={card.answer} onSubmitCard={handleEdit}/>
   else return (
     <Card fluid style={{ height: "100%" }}>
@@ -30,7 +44,7 @@ function StudyCard({ card, onUpdateCard }) {
       </Card.Content>
       <Button.Group basic compact className={'hidden'}>
         <Button compact onClick={() => setIsBeingEdited(true)}>Edit</Button>
-        <Button compact onClick={() => console.log('archive')}>Archive</Button>
+        <Button compact onClick={handleArchive}>Archive</Button>
       </Button.Group>
     </Card>
   )

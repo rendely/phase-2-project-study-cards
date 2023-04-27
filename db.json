@@ -29,7 +29,8 @@
       "id": 1,
       "question": "What is the method to find all DOM elements?",
       "answer": "querySelectorAll",
-      "collectionId": 1
+      "collectionId": 1,
+      "isArchived": true
     },
     {
       "id": 2,
@@ -137,7 +138,8 @@
       "question": "asdfasdf",
       "answer": "asdfasdf",
       "collectionId": "1",
-      "id": 19
+      "id": 19,
+      "isArchived": true
     }
   ]
 }
