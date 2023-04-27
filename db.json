@@ -2,7 +2,8 @@
   "collections": [
     {
       "id": 1,
-      "name": "Javascript"
+      "name": "Javascript",
+      "isArchived": false
     },
     {
       "id": 2,

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Card, Container, Divider, Grid } from 'semantic-ui-react'
+import { Container, Divider, Grid } from 'semantic-ui-react'
 import Layout from './Layout'
 import CardForm from './CardForm'
 import StudyCard from './StudyCard'
@@ -12,8 +12,8 @@ function CollectionDetail() {
   const [cards, setCards] = useState([]);
   const [collectionName, setCollectionName] = useState('');
 
-  useEffect(getCards, []);
-  useEffect(getCollectionInfo, []);
+  useEffect(getCards, [params.id]);
+  useEffect(getCollectionInfo, [params.id]);
 
   function getCards() {
     fetch('http://localhost:3001/cards?collectionId=' + params.id)
@@ -35,24 +35,21 @@ function CollectionDetail() {
       body: JSON.stringify(formData)
     })
       .then(r => r.json())
-      .then(newCard => setCards(cards => [...cards, newCard]))
+      .then(newCard => setCards(cards => [newCard,...cards]))
   }
 
   return (
     <Layout collectionName={collectionName}>
       <Container>
         <Grid columns={numColumns} >
+          <Grid.Column>
+            <CardForm onAddCard={handleAddCard} />
+          </Grid.Column>
           {cards.map(card =>
             <Grid.Column key={card.id}>
               <StudyCard card={card} />
             </Grid.Column>
           )}
-        </Grid>
-        <Divider />
-        <Grid centered columns={numColumns} doubling>
-          <Grid.Column>
-            <CardForm onAddCard={handleAddCard} />
-          </Grid.Column>
         </Grid>
       </Container>
     </Layout>)

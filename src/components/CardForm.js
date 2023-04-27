@@ -36,11 +36,11 @@ function CardForm({ onAddCard }) {
         <Form onSubmit={handleSubmit}>
           <Form.Field>
             <label>Question:</label>
-            <TextArea name='question' placeholder='Add your question' onChange={handleChange} value={formData.question}></TextArea>
+            <TextArea rows="2" name='question' placeholder='Add your question' onChange={handleChange} value={formData.question}></TextArea>
           </Form.Field>
           <Form.Field>
             <label>Answer:</label>
-            <TextArea name='answer' placeholder='Add your answer' onChange={handleChange} value={formData.answer}></TextArea>
+            <TextArea rows="2" name='answer' placeholder='Add your answer' onChange={handleChange} value={formData.answer}></TextArea>
           </Form.Field>
           <Button color={'green'} type='submit'>Add Card</Button>
         </Form>
