@@ -41,7 +41,7 @@
     {
       "id": 3,
       "question": "What is the interpolation operator?",
-      "answer": "The interpolation operator is used to insert the value of an expression into a string.",
+      "answer": "The interpolation operator is used to insert the value of an expression into a string. `Example ${var}`",
       "collectionId": 1,
       "needsReview": true
     },

@@ -10,7 +10,7 @@ function StudyCard({ card, onUpdateCard, onArchiveCard }) {
     fetch('http://localhost:3001/cards/'+card.id, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },
-      body: JSON.stringify(formData)
+      body: JSON.stringify({...formData, needsReview: true})
     })
       .then(r=>r.json())
       .then(updatedCard => {
