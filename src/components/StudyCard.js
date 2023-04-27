@@ -42,7 +42,7 @@ function StudyCard({ card, onUpdateCard, onArchiveCard }) {
       <Card.Content>
         {card.answer}
       </Card.Content>
-      <Button.Group basic compact className={'hidden'}>
+      <Button.Group basic compact>
         <Button compact onClick={() => setIsBeingEdited(true)}>Edit</Button>
         <Button compact onClick={handleArchive}>Archive</Button>
       </Button.Group>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Container, Divider, Grid } from 'semantic-ui-react'
+import { Container, Grid } from 'semantic-ui-react'
 import Layout from './Layout'
 import CardForm from './CardForm'
 import StudyCard from './StudyCard'
