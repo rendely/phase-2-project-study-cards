@@ -20,8 +20,7 @@
     },
     {
       "name": "Git",
-      "id": 5,
-      "isArchived": true
+      "id": 5
     }
   ],
   "cards": [
@@ -29,8 +28,7 @@
       "id": 1,
       "question": "What is the method to find all DOM elements?",
       "answer": "querySelectorAll",
-      "collectionId": 1,
-      "isArchived": true
+      "collectionId": 1
     },
     {
       "id": 2,
@@ -133,13 +131,6 @@
       "answer": "git add .",
       "collectionId": "5",
       "id": 18
-    },
-    {
-      "question": "asdfasdf",
-      "answer": "asdfasdf",
-      "collectionId": "1",
-      "id": 19,
-      "isArchived": true
     }
   ]
 }
