@@ -1,19 +1,25 @@
 import React, {useEffect, useState} from 'react'
 import Layout from './Layout'
 import ReviewCard from './ReviewCard';
-import { Card, Container, Grid } from 'semantic-ui-react'
+import { Card, Container, Grid, Progress } from 'semantic-ui-react'
 
 function Review() {
 
   const [cards, setCards] = useState([]);
+  const [totCards, setTotCards] = useState();
+  const [numCompleted, setNumCompleted] = useState(0);
+
   const currentCard = cards[0];
   useEffect(loadCards,[])
 
   function loadCards(){
-    console.log('loading');
     fetch('http://localhost:3001/cards')
       .then(r => r.json())
-      .then(cards => setCards(cards.filter(card => card.needsReview)))
+      .then(cards => {
+        const filteredCards = cards.filter(card => (card.needsReview || card.needsReview === undefined));
+        setCards(filteredCards);
+        setTotCards(filteredCards.length)
+      })
   }
 
   function updateCard(didGetIt){
@@ -26,14 +32,17 @@ function Review() {
       body: JSON.stringify(formData)
     })
     .then(r => r.json())
-    .then(updatedCard => setCards(cards => cards.filter(card => card.id !== updatedCard.id)))
+    .then(updatedCard => {
+      setCards(cards => cards.filter(card => card.id !== updatedCard.id));
+      setNumCompleted(num => num+1);
+    })
   }
 
   return (
     <Layout>
-      <Container textAlign='center'>
-        Todo: progress bar on number of cards to review
-        <Grid columns={3} centered>
+      <Container text textAlign='center'>
+        <Progress total={totCards} value={numCompleted} progress='ratio'/>
+        <Grid columns={1} centered>
           <Grid.Column>
             {currentCard ? 
             <ReviewCard card={currentCard} updateCard={updateCard} />
