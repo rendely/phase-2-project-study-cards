@@ -51,11 +51,7 @@ function CollectionDetail() {
         <Divider />
         <Grid centered columns={numColumns} doubling>
           <Grid.Column>
-            <Card fluid style={{ height: "100%" }}>
-              <Card.Content>
-                <CardForm onAddCard={handleAddCard} />
-              </Card.Content>
-            </Card>
+            <CardForm onAddCard={handleAddCard} />
           </Grid.Column>
         </Grid>
       </Container>
