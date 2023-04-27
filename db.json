@@ -28,13 +28,15 @@
       "id": 1,
       "question": "What is the method to find all DOM elements?",
       "answer": "querySelectorAll",
-      "collectionId": 1
+      "collectionId": 1,
+      "needsReview": true
     },
     {
       "id": 2,
       "question": "How would you select <div id='hello' />?",
       "answer": "#hello",
-      "collectionId": 2
+      "collectionId": 2,
+      "needsReview": true
     },
     {
       "id": 3,
@@ -82,7 +84,8 @@
       "id": 10,
       "question": "What is the difference between null and undefined?",
       "answer": "The difference between null and undefined is that null is a value that explicitly means \"nothing\", while undefined is a value that means \"not defined\".",
-      "collectionId": 1
+      "collectionId": 1,
+      "needsReview": true
     },
     {
       "id": 11,

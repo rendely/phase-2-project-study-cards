@@ -5,23 +5,37 @@ import { Card, Container, Grid } from 'semantic-ui-react'
 
 function Review() {
 
-  const [cards, setCards] = useState([{question: 'hi', answer: 'yo', id:14}, {question: 'bye', answer: 'cya', id:15}]);
+  const [cards, setCards] = useState([]);
   const [currentCard, setCurrentCard] = useState({});
 
+  useEffect(loadCards,[])
   useEffect(() => setCurrentCard(cards[0]),[cards]);
 
   function loadCards(){
-    console.log('loaded');
+    console.log('loading');
+    fetch('http://localhost:3001/cards')
+      .then(r => r.json())
+      .then(cards => setCards(cards.filter(card => card.needsReview)))
   }
 
-  function updateCard(){
-    console.log('updated');
-    setCards(cards.slice(1));
+  console.log(cards);
+
+  function updateCard(didGetIt){
+    const formData = { needsReview: !didGetIt };
+    console.log('updating!');
+    fetch('http://localhost:3001/cards/' + currentCard.id, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(formData)
+    })
+    .then(r => r.json())
+    .then(updatedCard => setCards(cards => cards.slice(1)))
   }
 
   return (
     <Layout>
-      <Container>
+      <Container textAlign='center'>
+        Todo: progress bar on number of cards to review
         <Grid columns={3} centered>
           <Grid.Column>
             {currentCard ? 

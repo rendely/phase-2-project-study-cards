@@ -1,12 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Card } from 'semantic-ui-react'
 
-function ReviewCard({card, updateCard}) {
+function ReviewCard({ card, updateCard }) {
 
   const [showAnswer, setShowAnswer] = useState(false);
 
-  function handleGotIt(){
-    updateCard();
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    function handleKeyDown(e) {
+      if (e.code === 'ArrowDown') setShowAnswer(true)
+      if (e.code === 'ArrowRight') handleResult(true)
+      if (e.code === 'ArrowLeft') handleResult(false)
+    };
+  }, [])
+
+  function handleResult(didGetIt) {
+    updateCard(didGetIt);
     setShowAnswer(false);
   }
 
@@ -21,8 +30,8 @@ function ReviewCard({card, updateCard}) {
             {card.answer}
           </Card.Content>
           <Button.Group compact>
-            <Button color="grey" onClick={() => console.log('didn\n know it')}>Didn't know it</Button>
-            <Button color="olive" onClick={handleGotIt}>Got it!</Button>
+            <Button color="grey" onClick={() => handleResult(false)}>Didn't know it</Button>
+            <Button color="olive" onClick={() => handleResult(true)}>Got it!</Button>
           </Button.Group>
         </>
         :

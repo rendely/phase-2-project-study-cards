@@ -22,7 +22,6 @@ function Collections() {
   }
 
   function handleAddCollection(formData) {
-    console.log(formData);
     fetch('http://localhost:3001/collections', {
       method: "POST",
       headers: { "Content-type": "application/json" },
