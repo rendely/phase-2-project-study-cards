@@ -38,16 +38,20 @@ function CollectionDetail() {
       .then(newCard => setCards(cards => [newCard,...cards]))
   }
 
+  function handleUpdateCard(newCard){
+    setCards(cards => cards.map(c => c.id === newCard.id ? newCard : c))
+  }
+
   return (
     <Layout collectionName={collectionName}>
       <Container>
         <Grid columns={numColumns} >
           <Grid.Column>
-            <CardForm onAddCard={handleAddCard} />
+            <CardForm onSubmitCard={handleAddCard}  />
           </Grid.Column>
           {cards.map(card =>
             <Grid.Column key={card.id}>
-              <StudyCard card={card} />
+              <StudyCard card={card} onUpdateCard={handleUpdateCard}/>
             </Grid.Column>
           )}
         </Grid>

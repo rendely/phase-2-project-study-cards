@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Button, Card, Form, TextArea } from 'semantic-ui-react'
 
-function CardForm({ onAddCard }) {
+function CardForm({ onSubmitCard, question, answer }) {
 
   const formDataEmpty = {
-    question: '',
-    answer: ''
+    question: question || '',
+    answer: answer || ''
   };
   const [formData, setFormData] = useState(formDataEmpty)
 
@@ -26,7 +26,7 @@ function CardForm({ onAddCard }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    onAddCard(formData);
+    onSubmitCard(formData);
     setFormData(formDataEmpty);
   }
 
@@ -42,7 +42,7 @@ function CardForm({ onAddCard }) {
             <label>Answer:</label>
             <TextArea rows="2" name='answer' placeholder='Add your answer' onChange={handleChange} value={formData.answer}></TextArea>
           </Form.Field>
-          <Button color={'green'} type='submit'>Add Card</Button>
+          <Button color={'green'} type='submit'>Submit</Button>
         </Form>
       </Card.Content>
     </Card>
