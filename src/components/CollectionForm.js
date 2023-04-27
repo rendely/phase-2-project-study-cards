@@ -23,22 +23,22 @@ function CollectionForm({ onAddCollection }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(formData);
     onAddCollection(formData);
     setFormData(formDataEmpty);
   }
 
   return (
-    <Card fluid style={{ height: "100%" }}>
-      <Card.Content>
-        <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
+      <Card fluid style={{ height: "100%" }}>
+        <Card.Content>
           <Form.Field>
-            <label>Name:</label>
-            <Input name='name' placeholder='Add your collection' onChange={handleChange} value={formData.name}></Input>
+            <Input name='name' placeholder='Name of your new collection' onChange={handleChange} value={formData.name}></Input>
           </Form.Field>
-        </Form>
-      </Card.Content>
-      <Button compact color={'green'} type='submit'>Add Collection</Button>
-    </Card>
+        </Card.Content>
+        <Button compact color={'green'} type='submit'>Add Collection</Button>
+      </Card>
+    </Form>
   )
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Container, Divider, Grid, Header, Icon, Modal } from 'semantic-ui-react'
+import { Button, Container, Grid, Header, Icon, Modal } from 'semantic-ui-react'
 import Layout from './Layout'
 import CollectionCard from './CollectionCard';
 import CollectionForm from './CollectionForm';
@@ -21,8 +21,8 @@ function Collections() {
       )
   }
 
-  function handleAddCollection(newCollection) {
-    const formData = newCollection;
+  function handleAddCollection(formData) {
+    console.log(formData);
     fetch('http://localhost:3001/collections', {
       method: "POST",
       headers: { "Content-type": "application/json" },
@@ -68,7 +68,7 @@ function Collections() {
           </p>
         </Modal.Content>
         <Modal.Actions>
-          <Button basic color='gray' inverted onClick={() => setShowModal(false)}>
+          <Button basic color='grey' inverted onClick={() => setShowModal(false)}>
             <Icon name='remove' /> No
           </Button>
           <Button color='red' inverted onClick={handleArchiveCollection}>
@@ -87,9 +87,6 @@ function Collections() {
               />
             </Grid.Column>
           )}
-        </Grid>
-        <Divider />
-        <Grid centered columns={4} doubling>
           <Grid.Column>
             <CollectionForm onAddCollection={handleAddCollection} />
           </Grid.Column>

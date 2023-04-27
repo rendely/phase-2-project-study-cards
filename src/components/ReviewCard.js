@@ -12,7 +12,7 @@ function ReviewCard({card, updateCard}) {
 
   return (
     <Card fluid style={{ height: "100%" }}>
-      <Card.Content style={{ backgroundColor: "lightgray" }}>
+      <Card.Content>
         {card.question}
       </Card.Content>
       {showAnswer ?
