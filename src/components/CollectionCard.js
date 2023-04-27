@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Button, Card} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
-function CollectionCard({collection, setShowModal}){
+function CollectionCard({collection, setShowModal, setSelectedCollectionId}){
   const [cards, setCards] = useState([]);
 
   useEffect(getCards,[]);
@@ -14,6 +14,7 @@ function CollectionCard({collection, setShowModal}){
   }
   
   function handleArchive(){
+    setSelectedCollectionId(collection.id);
     setShowModal(true);
   }
 

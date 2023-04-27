@@ -8,12 +8,13 @@ function Collections() {
 
   const [collections, setCollections] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [selectedCollectionId, setSelectedCollectionId] = useState(undefined);
 
   useEffect(getCollections, []);
   function getCollections() {
     fetch('http://localhost:3001/collections')
       .then(r => r.json())
-      .then(collections => setCollections(collections))
+      .then(collections => setCollections(collections.filter(c => c.isArchived === false || c.isArchived === undefined)))
   }
 
   function handleAddCollection(newCollection) {
@@ -25,6 +26,22 @@ function Collections() {
     })
       .then(r => r.json())
       .then(newCollection => setCollections(collection => [...collection, newCollection]))
+  }
+
+  function handleArchiveCollection(){
+    if (selectedCollectionId){
+      fetch('http://localhost:3001/collections/'+selectedCollectionId, {
+        method: "PATCH",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({isArchived: true})
+      })
+        .then(r => r.json())
+        .then(newCollection => {
+          setCollections(collection => collection.filter(c => c.id !== selectedCollectionId));
+          setSelectedCollectionId(null);
+        })
+    }
+    setShowModal(false);
   }
 
   return (
@@ -49,7 +66,7 @@ function Collections() {
           <Button basic color='red' inverted onClick={() => setShowModal(false)}>
             <Icon name='remove' /> No
           </Button>
-          <Button color='green' inverted onClick={() => setShowModal(false)}>
+          <Button color='green' inverted onClick={handleArchiveCollection}>
             <Icon name='checkmark' /> Yes
           </Button>
         </Modal.Actions>
@@ -60,7 +77,7 @@ function Collections() {
           {/* TODO: Refactor into its own component? */}
           {collections.map(collection =>
             <Grid.Column key={collection.id}>
-              <CollectionCard collection={collection} setShowModal={setShowModal} />
+              <CollectionCard collection={collection} setShowModal={setShowModal} setSelectedCollectionId={setSelectedCollectionId} />
             </Grid.Column>
           )}
         </Grid>
