@@ -28,7 +28,7 @@ function ReviewCard({ card, updateCard }) {
       </Card.Content>
       {showAnswer ?
         <>
-          <Card.Content>
+          <Card.Content style={{ backgroundColor: "LightGreen" }}>
             {card.answer}
           </Card.Content>
           <Button.Group compact>

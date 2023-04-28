@@ -56,8 +56,7 @@ function Review() {
           </Grid.Column>
         </Grid>
         <Segment secondary>
-          <h3>Keyboard Shortcuts:</h3>
-          Down arrow: Show answer | Left arrow: Didn't know it | Right arrow: Got it!
+          <b>Keyboard Shortcuts:</b> Down arrow: Show answer • Left arrow: Didn't know it • Right arrow: Got it!
         </Segment>
       </Container>
     </Layout>)
