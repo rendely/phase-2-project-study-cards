@@ -40,7 +40,7 @@ function StudyCard({ card, onUpdateCard, onArchiveCard }) {
         {card.question}
       </Card.Content>
       <Card.Content>
-        {card.answer}
+        <pre style={{whiteSpace: 'pre-wrap'}}>{card.answer}</pre>
       </Card.Content>
       <Button.Group basic compact>
         <Button compact onClick={() => setIsBeingEdited(true)}>Edit</Button>

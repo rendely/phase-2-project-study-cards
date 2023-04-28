@@ -29,7 +29,7 @@ function ReviewCard({ card, updateCard }) {
       {showAnswer ?
         <>
           <Card.Content style={{ backgroundColor: "LightGreen" }}>
-            {card.answer}
+          <pre style={{whiteSpace: 'pre-wrap'}}>{card.answer}</pre>
           </Card.Content>
           <Button.Group compact>
             <Button color="grey" onClick={() => handleResult(false)}>Didn't know it</Button>
