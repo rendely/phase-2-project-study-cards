@@ -23,11 +23,11 @@
       "answer": "useHistory",
       "collectionId": "1",
       "id": 1,
-      "needsReview": true,
-      "lastReviewTime": 1682656532427
+      "needsReview": false,
+      "lastReviewTime": 1682702419267
     },
     {
-      "question": "______ is the process of handling all the routing logic with JavaScript, without making any additional GET requests for some new HTML document.",
+      "question": "____ is the process of handling all the routing logic with JavaScript, without making any additional GET requests for some new HTML document.",
       "answer": "single page application",
       "collectionId": "1",
       "id": 2,
@@ -47,8 +47,8 @@
       "answer": "Provides declarative, accessible navigation ",
       "collectionId": "1",
       "id": 4,
-      "needsReview": true,
-      "lastReviewTime": 1682656534136
+      "needsReview": false,
+      "lastReviewTime": 1682701612500
     },
     {
       "question": "What does the <Route> React Router component do?",
@@ -67,7 +67,7 @@
       "lastReviewTime": 1682656534704
     },
     {
-      "question": "The ______ component's responsibility is to render a component when its path matches the current URL.",
+      "question": "The ____ component's responsibility is to render a component when its path matches the current URL.",
       "answer": "<Route>",
       "collectionId": "1",
       "id": 7,
@@ -75,7 +75,7 @@
       "lastReviewTime": 1682656535005
     },
     {
-      "question": "The _____ hook returns an object of key/value pairs of URL parameters.",
+      "question": "The ____ hook returns an object of key/value pairs of URL parameters.",
       "answer": "useParams",
       "collectionId": "1",
       "id": 8,
@@ -91,7 +91,7 @@
       "lastReviewTime": 1682656535585
     },
     {
-      "question": "We use ______ to change the browser's URL and show the user a new page in our application without making the user click on a link.",
+      "question": "We use ____ to change the browser's URL and show the user a new page in our application without making the user click on a link.",
       "answer": "Programmatic Navigation ",
       "collectionId": "1",
       "id": 10,
@@ -111,40 +111,40 @@
       "answer": "1. export default Card\n2. export default function Card(...",
       "collectionId": "1",
       "id": 12,
-      "needsReview": true,
-      "lastReviewTime": 1682656536335
+      "needsReview": false,
+      "lastReviewTime": 1682701617881
     },
     {
       "question": "How do you import a <Card> component",
       "answer": "import Card from './Card';",
       "collectionId": "1",
       "id": 13,
-      "needsReview": true,
-      "lastReviewTime": 1682656536653
+      "needsReview": false,
+      "lastReviewTime": 1682702448580
     },
     {
       "question": "What does a component need to have at a minimum?",
       "answer": "function Card(){\n  return (<div>Hi</div>);\n}",
       "collectionId": "1",
       "id": 14,
-      "needsReview": true,
-      "lastReviewTime": 1682656536936
+      "needsReview": false,
+      "lastReviewTime": 1682702444043
     },
     {
-      "question": "A React component is a function that takes in _____ and returns ____",
+      "question": "A React component is a function that takes in ____ and returns ____",
       "answer": "1. props\n2. jsx",
       "collectionId": "1",
       "id": 15,
-      "needsReview": true,
-      "lastReviewTime": 1682656537187
+      "needsReview": false,
+      "lastReviewTime": 1682701576987
     },
     {
       "question": "A React function component must start with a capital letter?",
       "answer": "True",
       "collectionId": "1",
       "id": 16,
-      "needsReview": true,
-      "lastReviewTime": 1682656537470
+      "needsReview": false,
+      "lastReviewTime": 1682702472144
     },
     {
       "question": "When should you use the key prop?",
@@ -159,8 +159,8 @@
       "answer": "Valid JavaScript syntax. JavaScript XML",
       "collectionId": "1",
       "id": 18,
-      "needsReview": true,
-      "lastReviewTime": 1682656537985
+      "needsReview": false,
+      "lastReviewTime": 1682701597093
     },
     {
       "question": "Is this a valid React component function App() {\n  return (\n    <Article />\n    <Comment />\n  );\n}",
@@ -202,22 +202,28 @@
       "needsReview": true
     },
     {
-      "question": "Physical layer -> data layer -> network layer -> _____-> session layer -> presentation layer -> Application layer",
+      "question": "Physical layer -> data layer -> network layer -> ____-> session layer -> presentation layer -> Application layer",
       "answer": "Transport layer",
       "collectionId": "3",
-      "id": 25
+      "id": 25,
+      "needsReview": false,
+      "lastReviewTime": 1682702467291
     },
     {
       "question": "What is declarative code?",
       "answer": "Describes what a program should accomplish (or what the end result should be)\nLeaves the determination of how to get to the end result up to the program",
       "collectionId": "1",
-      "id": 26
+      "id": 26,
+      "needsReview": true,
+      "lastReviewTime": 1682702435492
     },
     {
       "question": "What do you call code that describes what a program should accomplish?",
       "answer": "Declarative",
       "collectionId": "1",
-      "id": 27
+      "id": 27,
+      "needsReview": false,
+      "lastReviewTime": 1682702476650
     },
     {
       "question": "What do you call code that describes the explicit steps or actions to take?",
@@ -247,7 +253,9 @@
       "question": "What happens if useEffect is called with only a single argument?\n\nuseEffect(() => {\n    console.log(\"render\");\n  });",
       "answer": "It will run the code on every render. You add a second [] argument to only show on first render",
       "collectionId": "1",
-      "id": 32
+      "id": 32,
+      "needsReview": false,
+      "lastReviewTime": 1682701567247
     },
     {
       "question": "What React hook or function updates the state of a component?",
@@ -265,7 +273,9 @@
       "question": "What React hook or function causes a component to re-render when called?",
       "answer": "setState",
       "collectionId": "1",
-      "id": 35
+      "id": 35,
+      "needsReview": false,
+      "lastReviewTime": 1682702320118
     },
     {
       "question": "When we're using the useEffect hook, React gives us a way to control when the side effect function will run. What is it?",
@@ -283,13 +293,17 @@
       "question": "How do you use a cleanup function with useEffect?",
       "answer": "You return the cleanup function in the first argument",
       "collectionId": "1",
-      "id": 38
+      "id": 38,
+      "needsReview": false,
+      "lastReviewTime": 1682702426080
     },
     {
       "question": "A controlled component is a component that derives its input values from ____.",
       "answer": "state",
       "collectionId": "1",
-      "id": 39
+      "id": 39,
+      "needsReview": false,
+      "lastReviewTime": 1682702408788
     },
     {
       "question": "Any time you want to make a change (adding, updating or deleting an item) to an array that's being stored in state, you first need to make a copy of the array using the spread operator.",
@@ -343,7 +357,9 @@
       "question": "React will always re-render a component when the setState function is called?",
       "answer": "False - React will only re-render a component when setState is called with a new object.",
       "collectionId": "1",
-      "id": 48
+      "id": 48,
+      "needsReview": true,
+      "lastReviewTime": 1682702484856
     },
     {
       "question": "What does useState return when called?",

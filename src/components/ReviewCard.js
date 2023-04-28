@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card } from 'semantic-ui-react'
+import { Button, Card, Icon } from 'semantic-ui-react'
 
 function ReviewCard({ card, updateCard }) {
 
@@ -32,12 +32,12 @@ function ReviewCard({ card, updateCard }) {
           <pre style={{whiteSpace: 'pre-wrap'}}>{card.answer}</pre>
           </Card.Content>
           <Button.Group compact>
-            <Button color="grey" onClick={() => handleResult(false)}>Didn't know it</Button>
-            <Button color="olive" onClick={() => handleResult(true)}>Got it!</Button>
+            <Button color="grey" onClick={() => handleResult(false)}><Icon name='arrow left' /> Didn't know it</Button>
+            <Button color="olive" onClick={() => handleResult(true)}>Got it! <Icon name='arrow right' /> </Button>
           </Button.Group>
         </>
         :
-        <Button color="blue" onClick={() => setShowAnswer(true)}> Show Answer</Button>
+        <Button color="blue" onClick={() => setShowAnswer(true)}> Show Answer <Icon name='arrow down' /> </Button>
       }
     </Card>
   )

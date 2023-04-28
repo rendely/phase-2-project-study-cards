@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Layout from './Layout'
 import ReviewCard from './ReviewCard';
-import { Card, Container, Form, Grid, Progress, Segment } from 'semantic-ui-react'
+import { Card, Container, Divider, Form, Grid, Progress } from 'semantic-ui-react'
 const daysInMillis = 24*60*60*1000;
 
 function Review() {
@@ -76,8 +76,10 @@ function Review() {
             onChange={handleTimeChange}
           />
         </Form.Group>
+        <Divider />
       </Form>
-        <Progress total={totCards} value={numCompleted} progress='ratio' />
+        {numCompleted} / {totCards}
+        <Progress total={totCards} value={numCompleted} />
         <Grid columns={1} centered>
           <Grid.Column>
             {currentCard ?
@@ -91,11 +93,6 @@ function Review() {
             }
           </Grid.Column>
         </Grid>
-        <Container text>
-          <p style={{color: 'gray', fontSize: '0.8rem'}}>
-           <b>Keyboard Shortcuts:</b> Down arrow: Show answer • Left arrow: Didn't know it • Right arrow: Got it!
-          </p>
-        </Container>
       </Container>
     </Layout>)
 }
