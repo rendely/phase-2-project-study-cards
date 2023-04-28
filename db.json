@@ -3,6 +3,14 @@
     {
       "name": "React basics",
       "id": 1
+    },
+    {
+      "name": "GIT",
+      "id": 2
+    },
+    {
+      "name": "Internet",
+      "id": 3
     }
   ],
   "cards": [
@@ -157,6 +165,43 @@
       "id": 19,
       "needsReview": true,
       "lastReviewTime": 1682656538255
+    },
+    {
+      "question": "What does GIT stand for?",
+      "answer": "Global Information Tracker",
+      "collectionId": "2",
+      "id": 20
+    },
+    {
+      "question": "How do you push your code to the remote origin?",
+      "answer": "git push -u origin main",
+      "collectionId": "2",
+      "id": 21
+    },
+    {
+      "question": "How do you show a log of commits (bonus single line output per commit)?",
+      "answer": "git log --oneline",
+      "collectionId": "2",
+      "id": 22
+    },
+    {
+      "question": "What does the -u do in this command:\ngit push -u origin main",
+      "answer": "saves the remote repository",
+      "collectionId": "2",
+      "id": 23
+    },
+    {
+      "question": "Fill in the blank on this description of the internet:\nPhysical layer -> ____ -> network layer -> transport layer -> session layer -> presentation layer -> Application layer",
+      "answer": "Data layer",
+      "collectionId": "3",
+      "id": 24,
+      "needsReview": true
+    },
+    {
+      "question": "Physical layer -> data layer -> network layer -> _____-> session layer -> presentation layer -> Application layer",
+      "answer": "Transport layer",
+      "collectionId": "3",
+      "id": 25
     }
   ]
 }

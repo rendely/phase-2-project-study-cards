@@ -49,6 +49,7 @@ function CollectionDetail() {
   return (
     <Layout collectionName={collectionName}>
       <Container>
+        <h1>{collectionName}</h1>
         <Grid columns={numColumns} >
           <Grid.Column>
             <CardForm onSubmitCard={handleAddCard}  />

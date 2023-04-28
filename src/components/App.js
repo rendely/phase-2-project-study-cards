@@ -15,7 +15,6 @@ function App() {
     <Routes>
       <Route path="/collections" element={<Collections />} />
       <Route path="/collections/:id" element={<CollectionDetail />} />
-      <Route path="/collections/:id/add" element={<CardForm />} />
       <Route path="/review" element={<Review />} />
       <Route path="/search" element={<Search />} />
       <Route path="/" element={<Home />} />

@@ -19,7 +19,7 @@ function Review() {
       .then(cards => {
         const filteredCards = cards.filter(card => (card.needsReview || card.needsReview === undefined) || 
         (card.lastReviewTime === undefined || card.lastReviewTime < Date.now() - timeRangeDays * daysInMillis));
-        setCards(filteredCards);
+        setCards(filteredCards.sort(() => Math.random() - 0.5));
         setTotCards(filteredCards.length)
       })
   }
