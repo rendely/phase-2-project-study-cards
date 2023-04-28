@@ -11,6 +11,10 @@
     {
       "name": "Internet",
       "id": 3
+    },
+    {
+      "name": "Node",
+      "id": 4
     }
   ],
   "cards": [
@@ -202,6 +206,150 @@
       "answer": "Transport layer",
       "collectionId": "3",
       "id": 25
+    },
+    {
+      "question": "What is declarative code?",
+      "answer": "Describes what a program should accomplish (or what the end result should be)\nLeaves the determination of how to get to the end result up to the program",
+      "collectionId": "1",
+      "id": 26
+    },
+    {
+      "question": "What do you call code that describes what a program should accomplish?",
+      "answer": "Declarative",
+      "collectionId": "1",
+      "id": 27
+    },
+    {
+      "question": "What do you call code that describes the explicit steps or actions to take?",
+      "answer": "Imperative",
+      "collectionId": "1",
+      "id": 28
+    },
+    {
+      "question": "How do you download all packages in package.json?",
+      "answer": "npm install",
+      "collectionId": "4",
+      "id": 29
+    },
+    {
+      "question": "____ is a package manager for JS that works via the command line to install packages of pre-existing code",
+      "answer": "npm",
+      "collectionId": "4",
+      "id": 30
+    },
+    {
+      "question": "Why is state useful in React?",
+      "answer": "Change data, without reloading the page.",
+      "collectionId": "1",
+      "id": 31
+    },
+    {
+      "question": "What happens if useEffect is called with only a single argument?\n\nuseEffect(() => {\n    console.log(\"render\");\n  });",
+      "answer": "It will run the code on every render. You add a second [] argument to only show on first render",
+      "collectionId": "1",
+      "id": 32
+    },
+    {
+      "question": "What React hook or function updates the state of a component?",
+      "answer": "setState",
+      "collectionId": "1",
+      "id": 33
+    },
+    {
+      "question": "What React hook or function runs code not triggered by a user event?",
+      "answer": "useEffect",
+      "collectionId": "1",
+      "id": 34
+    },
+    {
+      "question": "What React hook or function causes a component to re-render when called?",
+      "answer": "setState",
+      "collectionId": "1",
+      "id": 35
+    },
+    {
+      "question": "When we're using the useEffect hook, React gives us a way to control when the side effect function will run. What is it?",
+      "answer": "By passing a second argument to useEffect of a dependencies array.",
+      "collectionId": "1",
+      "id": 36
+    },
+    {
+      "question": "When and why should we use a cleanup function with useEffect?",
+      "answer": "If we have a long running function that we want to stop running when our component is no longer the page.",
+      "collectionId": "1",
+      "id": 37
+    },
+    {
+      "question": "How do you use a cleanup function with useEffect?",
+      "answer": "You return the cleanup function in the first argument",
+      "collectionId": "1",
+      "id": 38
+    },
+    {
+      "question": "A controlled component is a component that derives its input values from ____.",
+      "answer": "state",
+      "collectionId": "1",
+      "id": 39
+    },
+    {
+      "question": "Any time you want to make a change (adding, updating or deleting an item) to an array that's being stored in state, you first need to make a copy of the array using the spread operator.",
+      "answer": "False - The important thing is that whatever value is passed to the setter function for that state is a new object rather than a reference to an existing object.",
+      "collectionId": "1",
+      "id": 40
+    },
+    {
+      "question": "____ is data passed down to a child component from a parent component.",
+      "answer": "props",
+      "collectionId": "1",
+      "id": 41
+    },
+    {
+      "question": "____ is data held internally by React, accessible by a component",
+      "answer": "state",
+      "collectionId": "1",
+      "id": 42
+    },
+    {
+      "question": "Event listeners cannot be attached directly to our custom React components.",
+      "answer": "True, can only be attached to DOM elements in JSX",
+      "collectionId": "1",
+      "id": 43
+    },
+    {
+      "question": "For data in state, what's the best method/operator to add an item to an array",
+      "answer": "spread operator",
+      "collectionId": "1",
+      "id": 44
+    },
+    {
+      "question": "For data in state, what's the best method/operator to remove an item",
+      "answer": "filter",
+      "collectionId": "1",
+      "id": 45
+    },
+    {
+      "question": "For data in state, what's the best method/operator update an item in an array",
+      "answer": "map",
+      "collectionId": "1",
+      "id": 46
+    },
+    {
+      "question": "What does a controlled form require? (two things)",
+      "answer": "1. Event listener to update state as user changes data\n2. Update info in the input to reflect state",
+      "collectionId": "1",
+      "id": 47
+    },
+    {
+      "question": "React will always re-render a component when the setState function is called?",
+      "answer": "False - React will only re-render a component when setState is called with a new object.",
+      "collectionId": "1",
+      "id": 48
+    },
+    {
+      "question": "What does useState return when called?",
+      "answer": "1. the current value for state\n2. a function to update that value",
+      "collectionId": "1",
+      "id": 49
     }
   ]
 }

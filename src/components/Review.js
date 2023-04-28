@@ -91,9 +91,11 @@ function Review() {
             }
           </Grid.Column>
         </Grid>
-        <Segment secondary>
-          <b>Keyboard Shortcuts:</b> Down arrow: Show answer • Left arrow: Didn't know it • Right arrow: Got it!
-        </Segment>
+        <Container text>
+          <p style={{color: 'gray', fontSize: '0.8rem'}}>
+           <b>Keyboard Shortcuts:</b> Down arrow: Show answer • Left arrow: Didn't know it • Right arrow: Got it!
+          </p>
+        </Container>
       </Container>
     </Layout>)
 }
