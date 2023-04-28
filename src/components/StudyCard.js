@@ -37,7 +37,7 @@ function StudyCard({ card, onUpdateCard, onArchiveCard }) {
   else return (
     <Card fluid style={{ height: "100%" }}>
       <Card.Content style={{ backgroundColor: "AliceBlue" }}>
-        {card.question}
+      <pre style={{whiteSpace: 'pre-wrap'}}>{card.question}</pre>
       </Card.Content>
       <Card.Content>
         <pre style={{whiteSpace: 'pre-wrap'}}>{card.answer}</pre>

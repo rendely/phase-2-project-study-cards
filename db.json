@@ -1,7 +1,7 @@
 {
   "collections": [
     {
-      "name": "React",
+      "name": "React basics",
       "id": 1
     }
   ],
@@ -10,116 +10,153 @@
       "question": "Which hook gives us the ability to programmatically navigate the user to a new page in our application?",
       "answer": "useHistory",
       "collectionId": "1",
-      "id": 1
+      "id": 1,
+      "needsReview": true,
+      "lastReviewTime": 1682656532427
     },
     {
       "question": "______ is the process of handling all the routing logic with JavaScript, without making any additional GET requests for some new HTML document.",
       "answer": "single page application",
       "collectionId": "1",
-      "id": 2
+      "id": 2,
+      "needsReview": true,
+      "lastReviewTime": 1682656532951
     },
     {
       "question": "What does the <Switch> React Router component do?",
       "answer": "Renders the first child <Route> or <Redirect> that matches the current location",
       "collectionId": "1",
-      "id": 3
+      "id": 3,
+      "needsReview": true,
+      "lastReviewTime": 1682656533321
     },
     {
       "question": "What does the <Link> React Router component do?",
       "answer": "Provides declarative, accessible navigation ",
       "collectionId": "1",
-      "id": 4
+      "id": 4,
+      "needsReview": true,
+      "lastReviewTime": 1682656534136
     },
     {
       "question": "What does the <Route> React Router component do?",
       "answer": "Renders a component when its path matches the current URL",
       "collectionId": "1",
       "id": 5,
-      "needsReview": true
+      "needsReview": true,
+      "lastReviewTime": 1682656534406
     },
     {
       "question": "What is server side routing vs client side routing?",
       "answer": "Server side happens when a route requests a new page from the server. Client side when it's handled by the JavaScript already loaded on the page",
       "collectionId": "1",
-      "id": 6
+      "id": 6,
+      "needsReview": true,
+      "lastReviewTime": 1682656534704
     },
     {
       "question": "The ______ component's responsibility is to render a component when its path matches the current URL.",
       "answer": "<Route>",
       "collectionId": "1",
-      "id": 7
+      "id": 7,
+      "needsReview": true,
+      "lastReviewTime": 1682656535005
     },
     {
       "question": "The _____ hook returns an object of key/value pairs of URL parameters.",
       "answer": "useParams",
       "collectionId": "1",
-      "id": 8
+      "id": 8,
+      "needsReview": true,
+      "lastReviewTime": 1682656535302
     },
     {
       "question": "How does useParams let you access dynamic data from the URL?",
       "answer": "/dogs/:id",
       "collectionId": "1",
-      "id": 9
+      "id": 9,
+      "needsReview": true,
+      "lastReviewTime": 1682656535585
     },
     {
       "question": "We use ______ to change the browser's URL and show the user a new page in our application without making the user click on a link.",
       "answer": "Programmatic Navigation ",
       "collectionId": "1",
-      "id": 10
+      "id": 10,
+      "needsReview": true,
+      "lastReviewTime": 1682656535853
     },
     {
       "question": "What are the benefits of client-side routing? (3 things)",
       "answer": "1. Programmatic navigation\n2. Speed when navigating\n3. Conditionally rendering components based on URL",
       "collectionId": "1",
-      "id": 11
+      "id": 11,
+      "needsReview": true,
+      "lastReviewTime": 1682656536123
     },
     {
       "question": "What are two ways to export a <Card> component?",
       "answer": "1. export default Card\n2. export default function Card(...",
       "collectionId": "1",
-      "id": 12
+      "id": 12,
+      "needsReview": true,
+      "lastReviewTime": 1682656536335
     },
     {
       "question": "How do you import a <Card> component",
       "answer": "import Card from './Card';",
       "collectionId": "1",
-      "id": 13
+      "id": 13,
+      "needsReview": true,
+      "lastReviewTime": 1682656536653
     },
     {
       "question": "What does a component need to have at a minimum?",
       "answer": "function Card(){\n  return (<div>Hi</div>);\n}",
       "collectionId": "1",
-      "id": 14
+      "id": 14,
+      "needsReview": true,
+      "lastReviewTime": 1682656536936
     },
     {
       "question": "A React component is a function that takes in _____ and returns ____",
       "answer": "1. props\n2. jsx",
       "collectionId": "1",
-      "id": 15
+      "id": 15,
+      "needsReview": true,
+      "lastReviewTime": 1682656537187
     },
     {
       "question": "A React function component must start with a capital letter?",
       "answer": "True",
       "collectionId": "1",
-      "id": 16
+      "id": 16,
+      "needsReview": true,
+      "lastReviewTime": 1682656537470
     },
     {
       "question": "When should you use the key prop?",
       "answer": "When rendering an array of components. \nThe key prop is a special prop that React uses to help optimize performance when rendering arrays of components.",
       "collectionId": "1",
-      "id": 17
+      "id": 17,
+      "needsReview": true,
+      "lastReviewTime": 1682656537720
     },
     {
       "question": "What is JSX?",
       "answer": "Valid JavaScript syntax. JavaScript XML",
       "collectionId": "1",
-      "id": 18
+      "id": 18,
+      "needsReview": true,
+      "lastReviewTime": 1682656537985
     },
     {
-      "question": "Is this a valid React component?\nfunction App() {\n  return (\n    <Article />\n    <Comment />\n  );\n}",
+      "question": "Is this a valid React component function App() {\n  return (\n    <Article />\n    <Comment />\n  );\n}",
       "answer": "False, you can only return one top level element. Otherwise you need to use a fragment <> </>",
       "collectionId": "1",
-      "id": 19
+      "id": 19,
+      "needsReview": true,
+      "lastReviewTime": 1682656538255
     }
   ]
 }

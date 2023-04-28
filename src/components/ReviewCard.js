@@ -23,12 +23,12 @@ function ReviewCard({ card, updateCard }) {
 
   return (
     <Card fluid style={{ height: "100%" }}>
-      <Card.Content>
-        {card.question}
+      <Card.Content style={{ backgroundColor: "AliceBlue" }}>
+      <pre style={{whiteSpace: 'pre-wrap'}}>{card.question}</pre>
       </Card.Content>
       {showAnswer ?
         <>
-          <Card.Content style={{ backgroundColor: "LightGreen" }}>
+          <Card.Content >
           <pre style={{whiteSpace: 'pre-wrap'}}>{card.answer}</pre>
           </Card.Content>
           <Button.Group compact>
