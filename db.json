@@ -518,6 +518,48 @@
       "answer": "True",
       "collectionId": "8",
       "id": 71
+    },
+    {
+      "question": "How do you add a click event listener?",
+      "answer": "el.addEventListener('click', callback);",
+      "collectionId": "8",
+      "id": 72
+    },
+    {
+      "question": "The ____ event fires when your page's DOM is fully parsed from the underlying html.",
+      "answer": "DOMContentLoaded",
+      "collectionId": "8",
+      "id": 73
+    },
+    {
+      "question": "The ____ event fires when a form is submitted.",
+      "answer": "submit",
+      "collectionId": "8",
+      "id": 74
+    },
+    {
+      "question": "How do you change the behavior of a form submit with javascript?",
+      "answer": "e.preventDefault()",
+      "collectionId": "8",
+      "id": 75
+    },
+    {
+      "question": "Write a reduce function to total this array: const expenses = [25, 99, 1000, 350];",
+      "answer": "expenses.reduce((acc, e) => acc + e, 0);",
+      "collectionId": "8",
+      "id": 76
+    },
+    {
+      "question": "How do you iterate over the keys in an object?",
+      "answer": "for...in",
+      "collectionId": "8",
+      "id": 77
+    },
+    {
+      "question": "How do you iterate over the values of an object?",
+      "answer": "for...of",
+      "collectionId": "8",
+      "id": 78
     }
   ]
 }
