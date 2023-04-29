@@ -15,6 +15,26 @@
     {
       "name": "Node",
       "id": 4
+    },
+    {
+      "name": "HTML",
+      "id": 5
+    },
+    {
+      "name": "CSS",
+      "id": 6
+    },
+    {
+      "name": "Algorithms",
+      "id": 7
+    },
+    {
+      "name": "JavaScript",
+      "id": 8
+    },
+    {
+      "name": "Server",
+      "id": 9
     }
   ],
   "cards": [
@@ -366,6 +386,126 @@
       "answer": "1. the current value for state\n2. a function to update that value",
       "collectionId": "1",
       "id": 49
+    },
+    {
+      "question": "What is an algorithm?",
+      "answer": "A well-defined procedure, or set of instructions, for accomplishing a specific task.",
+      "collectionId": "7",
+      "id": 50
+    },
+    {
+      "question": "What is Big O Notation?",
+      "answer": "Classify algorithms according to how their run time or space requirements grow as the input size grows.",
+      "collectionId": "7",
+      "id": 51
+    },
+    {
+      "question": "What is time complexity of this:\nfunction logLetter(string) {\n  for (const letter of string) {\n    console.log(letter);\n  }\n}",
+      "answer": "O(n)",
+      "collectionId": "7",
+      "id": 52
+    },
+    {
+      "question": "What is the time complexity of function badCounting(array) {\n  let count = 0;\n  array.forEach((value, idx) => {\n    array.forEach((testValue, testIdx) => {\n      if (testIdx !== idx && value === testValue) {\n        count++;\n      }\n    });\n  });\n  return count / 2;\n}",
+      "answer": "O(n^2)",
+      "collectionId": "7",
+      "id": 53
+    },
+    {
+      "question": "What is the time complexity of function findIndexOfElement(array, target) {\n  return array.indexOf(target);\n}",
+      "answer": "O(n)",
+      "collectionId": "7",
+      "id": 54
+    },
+    {
+      "question": "What is included in an HTTP request? (three things)",
+      "answer": "1. Headers\n2. HTTP verb\n3. URL",
+      "collectionId": "9",
+      "id": 55
+    },
+    {
+      "question": "What is included in an HTTP response? (three things)",
+      "answer": "1. Headers\n2. Status code\n3. Body",
+      "collectionId": "9",
+      "id": 56
+    },
+    {
+      "question": "What function do you use to send an object of data in an HTTP request? ",
+      "answer": "JSON.stringify(formData)",
+      "collectionId": "9",
+      "id": 57
+    },
+    {
+      "question": "Say we have a sendUpdate function that we want to use to send an account update to one of our customers (customer1). sendUpdate takes two arguments: the message text and the date. Which of the following shows the correct invocation of apply?",
+      "answer": "sendUpdate.apply(customer1, [message, date]);",
+      "collectionId": "8",
+      "id": 58
+    },
+    {
+      "question": "The ____ method returns a copy of the function it is called on, in which the context is \"set\" to the object that's passed to it as an argument.",
+      "answer": "bind",
+      "collectionId": "8",
+      "id": 59
+    },
+    {
+      "question": "What argument/arguments do you need to pass to the call method?",
+      "answer": "1. A context object\n2. A list of arguments to the function being called",
+      "collectionId": "8",
+      "id": 60
+    },
+    {
+      "question": "When a JavaScript function is invoked, what is included in its execution context? (three things)",
+      "answer": "1. The global execution context. \n2. The function execution context. \n3. The context of anything available via the scope chain. \n",
+      "collectionId": "8",
+      "id": 61
+    },
+    {
+      "question": "Inside a function, we use the ____ keyword to access the function's context object and its properties. ",
+      "answer": "this",
+      "collectionId": "8",
+      "id": 62
+    },
+    {
+      "question": "A function defined using ____ syntax does not create its own context.",
+      "answer": "arrow function",
+      "collectionId": "8",
+      "id": 63
+    },
+    {
+      "question": "What is hoisting?",
+      "answer": "Place a function call before the function definition",
+      "collectionId": "8",
+      "id": 64
+    },
+    {
+      "question": "What is an anonymous function?",
+      "answer": "const fn - function(){...",
+      "collectionId": "8",
+      "id": 65
+    },
+    {
+      "question": "What is an IIFE?",
+      "answer": "Immediately invoked function expression. ",
+      "collectionId": "8",
+      "id": 66
+    },
+    {
+      "question": "How do you write an IIFE?",
+      "answer": "(function(n) {return n })(2);",
+      "collectionId": "8",
+      "id": 67
+    },
+    {
+      "question": "What is function level scope?",
+      "answer": "Variables belonging to a function can only be accessed inside of it?",
+      "collectionId": "8",
+      "id": 68
+    },
+    {
+      "question": "What is enclosure?",
+      "answer": "When a function encloses the scope of a parent level function",
+      "collectionId": "8",
+      "id": 69
     }
   ]
 }

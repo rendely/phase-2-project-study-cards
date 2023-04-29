@@ -10,6 +10,7 @@ function Layout({ children, collectionName }) {
         <Menu.Item as={NavLink} to="/collections" name="Collections"></Menu.Item>
         <Menu.Item as={NavLink} to="/review" name="Review"></Menu.Item>
         <Menu.Item as={NavLink} to="/search" name="Search All"></Menu.Item>
+        <Menu.Item as={NavLink} to="/reset" name="Reset cards"></Menu.Item>
       </Menu>
       <Container>{children}</Container>
     </Container>)
