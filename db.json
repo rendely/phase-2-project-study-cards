@@ -44,23 +44,23 @@
       "collectionId": "1",
       "id": 1,
       "needsReview": false,
-      "lastReviewTime": 1682702419267
+      "lastReviewTime": 1685417245591
     },
     {
       "question": "____ is the process of handling all the routing logic with JavaScript, without making any additional GET requests for some new HTML document.",
       "answer": "single page application",
       "collectionId": "1",
       "id": 2,
-      "needsReview": true,
-      "lastReviewTime": 1682656532951
+      "needsReview": false,
+      "lastReviewTime": 1685416896579
     },
     {
       "question": "What does the <Switch> React Router component do?",
       "answer": "Renders the first child <Route> or <Redirect> that matches the current location",
       "collectionId": "1",
       "id": 3,
-      "needsReview": true,
-      "lastReviewTime": 1682656533321
+      "needsReview": false,
+      "lastReviewTime": 1685416774420
     },
     {
       "question": "What does the <Link> React Router component do?",
@@ -68,63 +68,63 @@
       "collectionId": "1",
       "id": 4,
       "needsReview": false,
-      "lastReviewTime": 1682701612500
+      "lastReviewTime": 1685417217115
     },
     {
       "question": "What does the <Route> React Router component do?",
       "answer": "Renders a component when its path matches the current URL",
       "collectionId": "1",
       "id": 5,
-      "needsReview": true,
-      "lastReviewTime": 1682656534406
+      "needsReview": false,
+      "lastReviewTime": 1685416832636
     },
     {
       "question": "What is server side routing vs client side routing?",
       "answer": "Server side happens when a route requests a new page from the server. Client side when it's handled by the JavaScript already loaded on the page",
       "collectionId": "1",
       "id": 6,
-      "needsReview": true,
-      "lastReviewTime": 1682656534704
+      "needsReview": false,
+      "lastReviewTime": 1685416891055
     },
     {
       "question": "The ____ component's responsibility is to render a component when its path matches the current URL.",
       "answer": "<Route>",
       "collectionId": "1",
       "id": 7,
-      "needsReview": true,
-      "lastReviewTime": 1682656535005
+      "needsReview": false,
+      "lastReviewTime": 1685416781810
     },
     {
       "question": "The ____ hook returns an object of key/value pairs of URL parameters.",
       "answer": "useParams",
       "collectionId": "1",
       "id": 8,
-      "needsReview": true,
-      "lastReviewTime": 1682656535302
+      "needsReview": false,
+      "lastReviewTime": 1685416944276
     },
     {
       "question": "How does useParams let you access dynamic data from the URL?",
       "answer": "/dogs/:id",
       "collectionId": "1",
       "id": 9,
-      "needsReview": true,
-      "lastReviewTime": 1682656535585
+      "needsReview": false,
+      "lastReviewTime": 1685416836574
     },
     {
       "question": "We use ____ to change the browser's URL and show the user a new page in our application without making the user click on a link.",
       "answer": "Programmatic Navigation ",
       "collectionId": "1",
       "id": 10,
-      "needsReview": true,
-      "lastReviewTime": 1682656535853
+      "needsReview": false,
+      "lastReviewTime": 1685417261180
     },
     {
       "question": "What are the benefits of client-side routing? (3 things)",
       "answer": "1. Programmatic navigation\n2. Speed when navigating\n3. Conditionally rendering components based on URL",
       "collectionId": "1",
       "id": 11,
-      "needsReview": true,
-      "lastReviewTime": 1682656536123
+      "needsReview": false,
+      "lastReviewTime": 1685417332967
     },
     {
       "question": "What are two ways to export a <Card> component?",
@@ -132,7 +132,7 @@
       "collectionId": "1",
       "id": 12,
       "needsReview": false,
-      "lastReviewTime": 1682701617881
+      "lastReviewTime": 1685416795006
     },
     {
       "question": "How do you import a <Card> component",
@@ -140,7 +140,7 @@
       "collectionId": "1",
       "id": 13,
       "needsReview": false,
-      "lastReviewTime": 1682702448580
+      "lastReviewTime": 1685416983653
     },
     {
       "question": "What does a component need to have at a minimum?",
@@ -148,7 +148,7 @@
       "collectionId": "1",
       "id": 14,
       "needsReview": false,
-      "lastReviewTime": 1682702444043
+      "lastReviewTime": 1685416719663
     },
     {
       "question": "A React component is a function that takes in ____ and returns ____",
@@ -156,7 +156,7 @@
       "collectionId": "1",
       "id": 15,
       "needsReview": false,
-      "lastReviewTime": 1682701576987
+      "lastReviewTime": 1685416919006
     },
     {
       "question": "A React function component must start with a capital letter?",
@@ -164,15 +164,15 @@
       "collectionId": "1",
       "id": 16,
       "needsReview": false,
-      "lastReviewTime": 1682702472144
+      "lastReviewTime": 1685416960328
     },
     {
       "question": "When should you use the key prop?",
       "answer": "When rendering an array of components. \nThe key prop is a special prop that React uses to help optimize performance when rendering arrays of components.",
       "collectionId": "1",
       "id": 17,
-      "needsReview": true,
-      "lastReviewTime": 1682656537720
+      "needsReview": false,
+      "lastReviewTime": 1685417006496
     },
     {
       "question": "What is JSX?",
@@ -180,15 +180,15 @@
       "collectionId": "1",
       "id": 18,
       "needsReview": false,
-      "lastReviewTime": 1682701597093
+      "lastReviewTime": 1685417212860
     },
     {
       "question": "Is this a valid React component function App() {\n  return (\n    <Article />\n    <Comment />\n  );\n}",
       "answer": "False, you can only return one top level element. Otherwise you need to use a fragment <> </>",
       "collectionId": "1",
       "id": 19,
-      "needsReview": true,
-      "lastReviewTime": 1682656538255
+      "needsReview": false,
+      "lastReviewTime": 1685416903967
     },
     {
       "question": "What does GIT stand for?",
@@ -234,8 +234,8 @@
       "answer": "Describes what a program should accomplish (or what the end result should be)\nLeaves the determination of how to get to the end result up to the program",
       "collectionId": "1",
       "id": 26,
-      "needsReview": true,
-      "lastReviewTime": 1682702435492
+      "needsReview": false,
+      "lastReviewTime": 1685416915844
     },
     {
       "question": "What do you call code that describes what a program should accomplish?",
@@ -243,31 +243,39 @@
       "collectionId": "1",
       "id": 27,
       "needsReview": false,
-      "lastReviewTime": 1682702476650
+      "lastReviewTime": 1685416964742
     },
     {
       "question": "What do you call code that describes the explicit steps or actions to take?",
       "answer": "Imperative",
       "collectionId": "1",
-      "id": 28
+      "id": 28,
+      "needsReview": false,
+      "lastReviewTime": 1685416949443
     },
     {
       "question": "How do you download all packages in package.json?",
       "answer": "npm install",
       "collectionId": "4",
-      "id": 29
+      "id": 29,
+      "needsReview": false,
+      "lastReviewTime": 1685417347891
     },
     {
       "question": "____ is a package manager for JS that works via the command line to install packages of pre-existing code",
       "answer": "npm",
       "collectionId": "4",
-      "id": 30
+      "id": 30,
+      "needsReview": true,
+      "lastReviewTime": 1685417354828
     },
     {
       "question": "Why is state useful in React?",
       "answer": "Change data, without reloading the page.",
       "collectionId": "1",
-      "id": 31
+      "id": 31,
+      "needsReview": false,
+      "lastReviewTime": 1685417267965
     },
     {
       "question": "What happens if useEffect is called with only a single argument?\n\nuseEffect(() => {\n    console.log(\"render\");\n  });",
@@ -275,19 +283,23 @@
       "collectionId": "1",
       "id": 32,
       "needsReview": false,
-      "lastReviewTime": 1682701567247
+      "lastReviewTime": 1685417249936
     },
     {
       "question": "What React hook or function updates the state of a component?",
       "answer": "setState",
       "collectionId": "1",
-      "id": 33
+      "id": 33,
+      "needsReview": false,
+      "lastReviewTime": 1685416992505
     },
     {
       "question": "What React hook or function runs code not triggered by a user event?",
       "answer": "useEffect",
       "collectionId": "1",
-      "id": 34
+      "id": 34,
+      "needsReview": false,
+      "lastReviewTime": 1685416693516
     },
     {
       "question": "What React hook or function causes a component to re-render when called?",
@@ -295,19 +307,23 @@
       "collectionId": "1",
       "id": 35,
       "needsReview": false,
-      "lastReviewTime": 1682702320118
+      "lastReviewTime": 1685417171775
     },
     {
       "question": "When we're using the useEffect hook, React gives us a way to control when the side effect function will run. What is it?",
       "answer": "By passing a second argument to useEffect of a dependencies array.",
       "collectionId": "1",
-      "id": 36
+      "id": 36,
+      "needsReview": false,
+      "lastReviewTime": 1685417210789
     },
     {
       "question": "When and why should we use a cleanup function with useEffect?",
       "answer": "If we have a long running function that we want to stop running when our component is no longer the page.",
       "collectionId": "1",
-      "id": 37
+      "id": 37,
+      "needsReview": false,
+      "lastReviewTime": 1685416977257
     },
     {
       "question": "How do you use a cleanup function with useEffect?",
@@ -315,7 +331,7 @@
       "collectionId": "1",
       "id": 38,
       "needsReview": false,
-      "lastReviewTime": 1682702426080
+      "lastReviewTime": 1685417242557
     },
     {
       "question": "A controlled component is a component that derives its input values from ____.",
@@ -323,99 +339,127 @@
       "collectionId": "1",
       "id": 39,
       "needsReview": false,
-      "lastReviewTime": 1682702408788
+      "lastReviewTime": 1685416871187
     },
     {
       "question": "Any time you want to make a change (adding, updating or deleting an item) to an array that's being stored in state, you first need to make a copy of the array using the spread operator.",
       "answer": "False - The important thing is that whatever value is passed to the setter function for that state is a new object rather than a reference to an existing object.",
       "collectionId": "1",
-      "id": 40
+      "id": 40,
+      "needsReview": false,
+      "lastReviewTime": 1685417255352
     },
     {
       "question": "____ is data passed down to a child component from a parent component.",
       "answer": "props",
       "collectionId": "1",
-      "id": 41
+      "id": 41,
+      "needsReview": false,
+      "lastReviewTime": 1685417146278
     },
     {
       "question": "____ is data held internally by React, accessible by a component",
       "answer": "state",
       "collectionId": "1",
-      "id": 42
+      "id": 42,
+      "needsReview": false,
+      "lastReviewTime": 1685416881561
     },
     {
       "question": "Event listeners cannot be attached directly to our custom React components.",
       "answer": "True, can only be attached to DOM elements in JSX",
       "collectionId": "1",
-      "id": 43
+      "id": 43,
+      "needsReview": false,
+      "lastReviewTime": 1685416989255
     },
     {
       "question": "For data in state, what's the best method/operator to add an item to an array",
       "answer": "spread operator",
       "collectionId": "1",
-      "id": 44
+      "id": 44,
+      "needsReview": false,
+      "lastReviewTime": 1685416679597
     },
     {
       "question": "For data in state, what's the best method/operator to remove an item",
       "answer": "filter",
       "collectionId": "1",
-      "id": 45
+      "id": 45,
+      "needsReview": false,
+      "lastReviewTime": 1685416986652
     },
     {
       "question": "For data in state, what's the best method/operator update an item in an array",
       "answer": "map",
       "collectionId": "1",
-      "id": 46
+      "id": 46,
+      "needsReview": false,
+      "lastReviewTime": 1685416971372
     },
     {
       "question": "What does a controlled form require? (two things)",
       "answer": "1. Event listener to update state as user changes data\n2. Update info in the input to reflect state",
       "collectionId": "1",
-      "id": 47
+      "id": 47,
+      "needsReview": false,
+      "lastReviewTime": 1685417194654
     },
     {
       "question": "React will always re-render a component when the setState function is called?",
       "answer": "False - React will only re-render a component when setState is called with a new object.",
       "collectionId": "1",
       "id": 48,
-      "needsReview": true,
-      "lastReviewTime": 1682702484856
+      "needsReview": false,
+      "lastReviewTime": 1685417230412
     },
     {
       "question": "What does useState return when called?",
       "answer": "1. the current value for state\n2. a function to update that value",
       "collectionId": "1",
-      "id": 49
+      "id": 49,
+      "needsReview": false,
+      "lastReviewTime": 1685416876715
     },
     {
       "question": "What is an algorithm?",
       "answer": "A well-defined procedure, or set of instructions, for accomplishing a specific task.",
       "collectionId": "7",
-      "id": 50
+      "id": 50,
+      "needsReview": false,
+      "lastReviewTime": 1685417388521
     },
     {
       "question": "What is Big O Notation?",
       "answer": "Classify algorithms according to how their run time or space requirements grow as the input size grows.",
       "collectionId": "7",
-      "id": 51
+      "id": 51,
+      "needsReview": true,
+      "lastReviewTime": 1685417392803
     },
     {
       "question": "What is time complexity of this:\nfunction logLetter(string) {\n  for (const letter of string) {\n    console.log(letter);\n  }\n}",
       "answer": "O(n)",
       "collectionId": "7",
-      "id": 52
+      "id": 52,
+      "needsReview": false,
+      "lastReviewTime": 1685417398735
     },
     {
       "question": "What is the time complexity of function badCounting(array) {\n  let count = 0;\n  array.forEach((value, idx) => {\n    array.forEach((testValue, testIdx) => {\n      if (testIdx !== idx && value === testValue) {\n        count++;\n      }\n    });\n  });\n  return count / 2;\n}",
       "answer": "O(n^2)",
       "collectionId": "7",
-      "id": 53
+      "id": 53,
+      "needsReview": false,
+      "lastReviewTime": 1685417384953
     },
     {
       "question": "What is the time complexity of function findIndexOfElement(array, target) {\n  return array.indexOf(target);\n}",
       "answer": "O(n)",
       "collectionId": "7",
-      "id": 54
+      "id": 54,
+      "needsReview": false,
+      "lastReviewTime": 1685417378895
     },
     {
       "question": "What is included in an HTTP request? (three things)",
