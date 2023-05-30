@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
 import Layout from './Layout'
 import ReviewCard from './ReviewCard';
 import { Card, Container, Divider, Form, Grid, Progress } from 'semantic-ui-react'
@@ -9,6 +10,8 @@ function Review() {
   const [cards, setCards] = useState([]);
   const [totCards, setTotCards] = useState();
   const [numCompleted, setNumCompleted] = useState(0);
+  const {collectionId} = useParams();
+  console.log(collectionId);
 
   const currentCard = cards[0];
   useEffect(loadCards, [timeRangeDays]);
@@ -17,8 +20,12 @@ function Review() {
     fetch('http://localhost:3001/cards')
       .then(r => r.json())
       .then(cards => {
-        const filteredCards = cards.filter(card => (card.needsReview || card.needsReview === undefined) || 
-        (card.lastReviewTime === undefined || card.lastReviewTime < Date.now() - timeRangeDays * daysInMillis));
+        const filteredCards = cards.filter(card => {
+          const needsReviewOrNew = (card.needsReview || card.needsReview === undefined);
+          const notReviewedRecently = (card.lastReviewTime === undefined || card.lastReviewTime < Date.now() - timeRangeDays * daysInMillis);
+          const matchesCollection = (collectionId !== undefined ? card.collectionId === collectionId : true);
+          return (needsReviewOrNew || notReviewedRecently) && matchesCollection;
+        });
         setCards(filteredCards.sort(() => Math.random() - 0.5));
         setTotCards(filteredCards.length)
       })

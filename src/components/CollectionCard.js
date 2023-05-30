@@ -26,7 +26,11 @@ function CollectionCard({ collection, setShowModal, setSelectedCollectionId }) {
       <Card.Content textAlign='center'>
         {cards.length} Cards
       </Card.Content>
+      <Button.Group basic compact>
+
       <Button compact onClick={handleArchive}>Archive</Button>
+      <Button><Link to={`/review/${collection.id}`} syle={{color: "darkcyan"}}>Review</Link></Button>
+      </Button.Group>
     </Card>
   )
 }

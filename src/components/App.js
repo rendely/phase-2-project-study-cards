@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Home from './Home';
-import CardForm from './CardForm';
 import Collections from './Collections';
 import CollectionDetail from './CollectionDetail';
 import Review from './Review';
@@ -16,6 +15,7 @@ function App() {
       <Route path="/collections" element={<Collections />} />
       <Route path="/collections/:id" element={<CollectionDetail />} />
       <Route path="/review" element={<Review />} />
+      <Route path="/review/:collectionId" element={<Review />} />
       <Route path="/search" element={<Search />} />
       <Route path="/" element={<Home />} />
     </Routes>
