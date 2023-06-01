@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Container, Grid } from 'semantic-ui-react'
 import Layout from './Layout'
-import CardForm from './CardForm'
+import StudyCardForm from './StudyCardForm'
 import StudyCard from './StudyCard'
 
 function CollectionDetail() {
@@ -52,7 +52,7 @@ function CollectionDetail() {
         <h1>{collectionName}</h1>
         <Grid columns={numColumns} >
           <Grid.Column>
-            <CardForm onSubmitCard={handleAddCard}  />
+            <StudyCardForm onSubmitCard={handleAddCard}  />
           </Grid.Column>
           {cards.map(card =>
             <Grid.Column key={card.id}>

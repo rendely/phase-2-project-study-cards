@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Card } from 'semantic-ui-react'
-import CardForm from './CardForm'
+import StudyCardForm from './StudyCardForm'
 
 function StudyCard({ card, onUpdateCard, onArchiveCard }) {
 
@@ -33,7 +33,7 @@ function StudyCard({ card, onUpdateCard, onArchiveCard }) {
     onArchiveCard(card.id);
   }
 
-  if (isBeingEdited) return <CardForm question={card.question} answer={card.answer} onSubmitCard={handleEdit}/>
+  if (isBeingEdited) return <StudyCardForm question={card.question} answer={card.answer} onSubmitCard={handleEdit}/>
   else return (
     <Card fluid style={{ height: "100%" }}>
       <Card.Content style={{ backgroundColor: "AliceBlue" }}>

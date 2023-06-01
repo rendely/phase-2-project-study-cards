@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Card, Form, TextArea } from 'semantic-ui-react'
 
-function CardForm({ onSubmitCard, question, answer }) {
+function StudyCardForm({ onSubmitCard, question, answer }) {
 
   const formDataEmpty = {
     question: question || '',
@@ -49,5 +49,5 @@ function CardForm({ onSubmitCard, question, answer }) {
   )
 }
 
-export default CardForm
+export default StudyCardForm
 
