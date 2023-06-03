@@ -11,7 +11,6 @@ function Review() {
   const [totCards, setTotCards] = useState();
   const [numCompleted, setNumCompleted] = useState(0);
   const {collectionId} = useParams();
-  console.log(collectionId);
 
   const currentCard = cards[0];
   useEffect(loadCards, [timeRangeDays]);
@@ -34,7 +33,6 @@ function Review() {
   function updateCard(didGetIt) {
     const formData = { needsReview: !didGetIt, lastReviewTime: Date.now() };
     const id = currentCard.id;
-    console.log('updating!', formData, currentCard, id);
     fetch('http://localhost:3001/cards/' + id, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },

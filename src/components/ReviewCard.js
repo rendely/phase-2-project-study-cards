@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Button, Card, Icon } from 'semantic-ui-react'
 
 function ReviewCard({ card, updateCard }) {
 
   const [showAnswer, setShowAnswer] = useState(false);
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return (() => document.removeEventListener('keydown', handleKeyDown));
-  }, [card]);
+
+  const cardRef = useRef(null);
+  
+  useEffect(() => {cardRef.current.focus();},[]);
 
   function handleKeyDown(e) {
     if (e.code === 'ArrowDown') setShowAnswer(true)
@@ -22,7 +22,8 @@ function ReviewCard({ card, updateCard }) {
   }
 
   return (
-    <Card fluid style={{ height: "100%" }}>
+    <div onKeyDown={handleKeyDown} tabIndex={0} ref={cardRef}>
+    <Card fluid style={{ height: "100%" }} >
       <Card.Content style={{ backgroundColor: "AliceBlue" }}>
       <pre style={{whiteSpace: 'pre-wrap'}}>{card.question}</pre>
       </Card.Content>
@@ -40,6 +41,7 @@ function ReviewCard({ card, updateCard }) {
         <Button color="blue" onClick={() => setShowAnswer(true)}> Show Answer <Icon name='arrow down' /> </Button>
       }
     </Card>
+    </div>
   )
 }
 
