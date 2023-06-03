@@ -16,7 +16,6 @@ function ReviewCard({ card, updateCard }) {
   };
 
   function handleResult(didGetIt) {
-    console.log(card, didGetIt);
     updateCard(didGetIt);
     setShowAnswer(false);
   }
