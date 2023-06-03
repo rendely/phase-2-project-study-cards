@@ -604,6 +604,24 @@
       "answer": "for...of",
       "collectionId": "8",
       "id": 78
+    },
+    {
+      "question": "What is the \"...\" syntax called?",
+      "answer": "spread operator",
+      "collectionId": "8",
+      "id": 79
+    },
+    {
+      "question": "Can the onClick event handler be attached to any component in React?",
+      "answer": "No, must be a clickable element like a button or div",
+      "collectionId": "1",
+      "id": 80
+    },
+    {
+      "question": "How can you update state with a sorted version of the data?",
+      "answer": "You need to make a copy first, e.g. with slice or spread operator",
+      "collectionId": "1",
+      "id": 81
     }
   ]
 }
