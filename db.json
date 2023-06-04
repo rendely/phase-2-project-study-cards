@@ -35,6 +35,10 @@
     {
       "name": "Server",
       "id": 9
+    },
+    {
+      "name": "React router",
+      "id": 10
     }
   ],
   "cards": [
@@ -622,6 +626,86 @@
       "answer": "You need to make a copy first, e.g. with slice or spread operator",
       "collectionId": "1",
       "id": 81
+    },
+    {
+      "question": "How do you import react router?",
+      "answer": "import { BrowserRouter } from \"react-router-dom\";",
+      "collectionId": "10",
+      "id": 82
+    },
+    {
+      "question": "How do you setup an App component to use react router?",
+      "answer": "<BrowserRouter>\n    <App />\n</BrowserRouter>",
+      "collectionId": "10",
+      "id": 83,
+      "needsReview": true
+    },
+    {
+      "question": "How do you setup routes in your App component?",
+      "answer": "<Routes>\n    <Route path=\"/search\" element={<Search />} />\n    <Route path=\"/\" element={<Home />} />\n</Routes>",
+      "collectionId": "10",
+      "id": 84
+    },
+    {
+      "question": "What are the 3 main props in the Route component?",
+      "answer": "path, element, exact",
+      "collectionId": "10",
+      "id": 85
+    },
+    {
+      "question": "What does \"exact\" prop do in the Route component?",
+      "answer": "Disables partial matching",
+      "collectionId": "10",
+      "id": 86
+    },
+    {
+      "question": "How do you add a link that knows whether it's active or not?",
+      "answer": "<NavLink to=\"/\" end>\n  Home\n</NavLink>",
+      "collectionId": "10",
+      "id": 87
+    },
+    {
+      "question": "How do you create a link?",
+      "answer": "<Link to=\"/profile\">Profile</Link>",
+      "collectionId": "10",
+      "id": 88
+    },
+    {
+      "question": "How do you get URL parameters with react router?",
+      "answer": "First define the param in your Route \n<Route path=\"/collections/:id\" element={<CollectionDetail />} />\n\nThen access with useParams hook:\nconst params = useParams();\nconst param = params.id;",
+      "collectionId": "10",
+      "id": 89
+    },
+    {
+      "question": "How do you navigate programmatically in react router?",
+      "answer": "useHistory hook",
+      "collectionId": "10",
+      "id": 90
+    },
+    {
+      "question": "How do you use the useHistory hook?",
+      "answer": "let history = useHistory();\nhistory.push(\"/home\");",
+      "collectionId": "10",
+      "id": 91
+    },
+    {
+      "question": "How do you use ReactDom?",
+      "answer": "const root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n      <App />\n);",
+      "collectionId": "1",
+      "id": 92,
+      "needsReview": true
+    },
+    {
+      "question": "Can you nest <Route> components?",
+      "answer": "Yes! And they get combined.",
+      "collectionId": "10",
+      "id": 93
+    },
+    {
+      "question": "How do Routes or Switch work?",
+      "answer": "Only choose the single best match, starting from the first <Route> in the list",
+      "collectionId": "10",
+      "id": 94
     }
   ]
 }
