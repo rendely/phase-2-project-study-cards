@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Layout from './Layout'
 import ReviewCard from './ReviewCard';
 import { Card, Container, Divider, Form, Grid, Progress } from 'semantic-ui-react'
-const daysInMillis = 24*60*60*1000;
+
 
 function Review() {
   const [timeRangeDays, setTimeRangeDays] = useState('7');
@@ -11,6 +11,7 @@ function Review() {
   const [totCards, setTotCards] = useState();
   const [numCompleted, setNumCompleted] = useState(0);
   const {collectionId} = useParams();
+  const daysInMillis = 24*60*60*1000;
 
   const currentCard = cards[0];
   useEffect(loadCards, [timeRangeDays]);
