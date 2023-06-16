@@ -42,7 +42,7 @@ function CollectionDetail() {
   }
 
   function handleArchiveCard(updatedCard) {
-    setCards(card => cards.map(c => c.id !== updatedCard.id ? c : updatedCard));
+    setCards(cards => cards.map(c => c.id !== updatedCard.id ? c : updatedCard));
   }
 
   return (
