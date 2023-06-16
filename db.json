@@ -39,24 +39,29 @@
     {
       "name": "React router",
       "id": 10
+    },
+    {
+      "name": "Python",
+      "id": 11
     }
   ],
   "cards": [
     {
       "question": "Which hook gives us the ability to programmatically navigate the user to a new page in our application?",
-      "answer": "useHistory",
+      "answer": "useHistory\nor in newer versions of react useNavigate",
       "collectionId": "1",
       "id": 1,
-      "needsReview": true,
-      "lastReviewTime": 1686105721146
+      "needsReview": false,
+      "lastReviewTime": 1686887809530
     },
     {
       "question": "____ is the process of handling all the routing logic with JavaScript, without making any additional GET requests for some new HTML document.",
       "answer": "single page application",
       "collectionId": "1",
       "id": 2,
-      "needsReview": true,
-      "lastReviewTime": 1686104976743
+      "needsReview": false,
+      "lastReviewTime": 1686888043035,
+      "isArchived": false
     },
     {
       "question": "What does the <Switch> React Router component do?",
@@ -64,7 +69,7 @@
       "collectionId": "1",
       "id": 3,
       "needsReview": false,
-      "lastReviewTime": 1686104947297
+      "lastReviewTime": 1686887735300
     },
     {
       "question": "What does the <Link> React Router component do?",
@@ -72,7 +77,7 @@
       "collectionId": "1",
       "id": 4,
       "needsReview": false,
-      "lastReviewTime": 1686105508345
+      "lastReviewTime": 1686888011287
     },
     {
       "question": "What does the <Route> React Router component do?",
@@ -80,7 +85,7 @@
       "collectionId": "1",
       "id": 5,
       "needsReview": false,
-      "lastReviewTime": 1686105424057
+      "lastReviewTime": 1686887911855
     },
     {
       "question": "What is server side routing vs client side routing?",
@@ -88,7 +93,7 @@
       "collectionId": "1",
       "id": 6,
       "needsReview": false,
-      "lastReviewTime": 1686105467554
+      "lastReviewTime": 1686887979159
     },
     {
       "question": "The ____ component's responsibility is to render a component when its path matches the current URL.",
@@ -96,7 +101,7 @@
       "collectionId": "1",
       "id": 7,
       "needsReview": false,
-      "lastReviewTime": 1685416781810
+      "lastReviewTime": 1686887821368
     },
     {
       "question": "The ____ hook returns an object of key/value pairs of URL parameters.",
@@ -104,15 +109,15 @@
       "collectionId": "1",
       "id": 8,
       "needsReview": false,
-      "lastReviewTime": 1686105159387
+      "lastReviewTime": 1686888036164
     },
     {
       "question": "How does useParams let you access dynamic data from the URL?",
-      "answer": "/dogs/:id",
+      "answer": "/dogs/:id\n\nconst parms = useParams()\n{params.id}",
       "collectionId": "1",
       "id": 9,
       "needsReview": false,
-      "lastReviewTime": 1686105300675
+      "lastReviewTime": 1686887935152
     },
     {
       "question": "We use ____ to change the browser's URL and show the user a new page in our application without making the user click on a link.",
@@ -120,7 +125,7 @@
       "collectionId": "1",
       "id": 10,
       "needsReview": false,
-      "lastReviewTime": 1686105021953
+      "lastReviewTime": 1686887983086
     },
     {
       "question": "What are the benefits of client-side routing? (3 things)",
@@ -128,15 +133,15 @@
       "collectionId": "1",
       "id": 11,
       "needsReview": false,
-      "lastReviewTime": 1685417332967
+      "lastReviewTime": 1686887927392
     },
     {
       "question": "What are two ways to export a <Card> component?",
       "answer": "1. export default Card\n2. export default function Card(...",
       "collectionId": "1",
       "id": 12,
-      "needsReview": true,
-      "lastReviewTime": 1686105707399
+      "needsReview": false,
+      "lastReviewTime": 1686887652652
     },
     {
       "question": "How do you import a <Card> component",
@@ -144,7 +149,7 @@
       "collectionId": "1",
       "id": 13,
       "needsReview": false,
-      "lastReviewTime": 1686105473743
+      "lastReviewTime": 1686888016927
     },
     {
       "question": "What does a component need to have at a minimum?",
@@ -152,7 +157,7 @@
       "collectionId": "1",
       "id": 14,
       "needsReview": false,
-      "lastReviewTime": 1685416719663
+      "lastReviewTime": 1686887957090
     },
     {
       "question": "A React component is a function that takes in ____ and returns ____",
@@ -160,7 +165,7 @@
       "collectionId": "1",
       "id": 15,
       "needsReview": false,
-      "lastReviewTime": 1686104965685
+      "lastReviewTime": 1686887756374
     },
     {
       "question": "A React function component must start with a capital letter?",
@@ -168,15 +173,15 @@
       "collectionId": "1",
       "id": 16,
       "needsReview": false,
-      "lastReviewTime": 1686104986427
+      "lastReviewTime": 1686887952259
     },
     {
       "question": "When should you use the key prop?",
       "answer": "When rendering an array of components. \nThe key prop is a special prop that React uses to help optimize performance when rendering arrays of components.",
       "collectionId": "1",
       "id": 17,
-      "needsReview": true,
-      "lastReviewTime": 1686105179493
+      "needsReview": false,
+      "lastReviewTime": 1686887656652
     },
     {
       "question": "What is JSX?",
@@ -184,7 +189,7 @@
       "collectionId": "1",
       "id": 18,
       "needsReview": false,
-      "lastReviewTime": 1686105235751
+      "lastReviewTime": 1686887680381
     },
     {
       "question": "Is this a valid React component function App() {\n  return (\n    <Article />\n    <Comment />\n  );\n}",
@@ -192,7 +197,7 @@
       "collectionId": "1",
       "id": 19,
       "needsReview": false,
-      "lastReviewTime": 1685416903967
+      "lastReviewTime": 1686887943534
     },
     {
       "question": "What does GIT stand for?",
@@ -243,7 +248,7 @@
       "collectionId": "1",
       "id": 26,
       "needsReview": false,
-      "lastReviewTime": 1685416915844
+      "lastReviewTime": 1686887824177
     },
     {
       "question": "What do you call code that describes what a program should accomplish?",
@@ -251,7 +256,7 @@
       "collectionId": "1",
       "id": 27,
       "needsReview": false,
-      "lastReviewTime": 1686105245917
+      "lastReviewTime": 1686887760058
     },
     {
       "question": "What do you call code that describes the explicit steps or actions to take?",
@@ -259,7 +264,7 @@
       "collectionId": "1",
       "id": 28,
       "needsReview": false,
-      "lastReviewTime": 1686105188061
+      "lastReviewTime": 1686887806131
     },
     {
       "question": "How do you download all packages in package.json?",
@@ -283,7 +288,7 @@
       "collectionId": "1",
       "id": 31,
       "needsReview": false,
-      "lastReviewTime": 1686105521639
+      "lastReviewTime": 1686887661262
     },
     {
       "question": "What happens if useEffect is called with only a single argument?\n\nuseEffect(() => {\n    console.log(\"render\");\n  });",
@@ -291,15 +296,15 @@
       "collectionId": "1",
       "id": 32,
       "needsReview": false,
-      "lastReviewTime": 1686105012125
+      "lastReviewTime": 1686887920175
     },
     {
       "question": "What React hook or function updates the state of a component?",
       "answer": "setState",
       "collectionId": "1",
       "id": 33,
-      "needsReview": true,
-      "lastReviewTime": 1686104982559
+      "needsReview": false,
+      "lastReviewTime": 1686887889817
     },
     {
       "question": "What React hook or function runs code not triggered by a user event?",
@@ -307,7 +312,7 @@
       "collectionId": "1",
       "id": 34,
       "needsReview": false,
-      "lastReviewTime": 1686105498769
+      "lastReviewTime": 1686887996228
     },
     {
       "question": "What React hook or function causes a component to re-render when called?",
@@ -315,7 +320,7 @@
       "collectionId": "1",
       "id": 35,
       "needsReview": false,
-      "lastReviewTime": 1686105073369
+      "lastReviewTime": 1686887786589
     },
     {
       "question": "When we're using the useEffect hook, React gives us a way to control when the side effect function will run. What is it?",
@@ -323,7 +328,7 @@
       "collectionId": "1",
       "id": 36,
       "needsReview": false,
-      "lastReviewTime": 1686105232371
+      "lastReviewTime": 1686887990262
     },
     {
       "question": "When and why should we use a cleanup function with useEffect?",
@@ -331,7 +336,7 @@
       "collectionId": "1",
       "id": 37,
       "needsReview": false,
-      "lastReviewTime": 1685416977257
+      "lastReviewTime": 1686887668448
     },
     {
       "question": "How do you use a cleanup function with useEffect?",
@@ -339,7 +344,7 @@
       "collectionId": "1",
       "id": 38,
       "needsReview": false,
-      "lastReviewTime": 1686105434417
+      "lastReviewTime": 1686887803876
     },
     {
       "question": "A controlled component is a component that derives its input values from ____.",
@@ -347,7 +352,7 @@
       "collectionId": "1",
       "id": 39,
       "needsReview": false,
-      "lastReviewTime": 1685416871187
+      "lastReviewTime": 1686887892373
     },
     {
       "question": "Any time you want to make a change (adding, updating or deleting an item) to an array that's being stored in state, you first need to make a copy of the array using the spread operator.",
@@ -355,7 +360,7 @@
       "collectionId": "1",
       "id": 40,
       "needsReview": false,
-      "lastReviewTime": 1686104996929
+      "lastReviewTime": 1686887675772
     },
     {
       "question": "____ is data passed down to a child component from a parent component.",
@@ -363,7 +368,7 @@
       "collectionId": "1",
       "id": 41,
       "needsReview": false,
-      "lastReviewTime": 1686105440839
+      "lastReviewTime": 1686887992637
     },
     {
       "question": "____ is data held internally by React, accessible by a component",
@@ -371,7 +376,7 @@
       "collectionId": "1",
       "id": 42,
       "needsReview": false,
-      "lastReviewTime": 1686105182185
+      "lastReviewTime": 1686887790263
     },
     {
       "question": "Event listeners cannot be attached directly to our custom React components.",
@@ -379,7 +384,7 @@
       "collectionId": "1",
       "id": 43,
       "needsReview": false,
-      "lastReviewTime": 1685416989255
+      "lastReviewTime": 1686888008307
     },
     {
       "question": "For data in state, what's the best method/operator to add an item to an array",
@@ -387,7 +392,7 @@
       "collectionId": "1",
       "id": 44,
       "needsReview": false,
-      "lastReviewTime": 1685416679597
+      "lastReviewTime": 1686887960342
     },
     {
       "question": "For data in state, what's the best method/operator to remove an item",
@@ -395,7 +400,7 @@
       "collectionId": "1",
       "id": 45,
       "needsReview": false,
-      "lastReviewTime": 1686105065721
+      "lastReviewTime": 1686887886179
     },
     {
       "question": "For data in state, what's the best method/operator update an item in an array",
@@ -403,7 +408,7 @@
       "collectionId": "1",
       "id": 46,
       "needsReview": false,
-      "lastReviewTime": 1686105282598
+      "lastReviewTime": 1686887748445
     },
     {
       "question": "What does a controlled form require? (two things)",
@@ -411,7 +416,7 @@
       "collectionId": "1",
       "id": 47,
       "needsReview": false,
-      "lastReviewTime": 1686105291774
+      "lastReviewTime": 1686888023309
     },
     {
       "question": "React will always re-render a component when the setState function is called?",
@@ -419,7 +424,7 @@
       "collectionId": "1",
       "id": 48,
       "needsReview": false,
-      "lastReviewTime": 1686105386295
+      "lastReviewTime": 1686887814436
     },
     {
       "question": "What does useState return when called?",
@@ -427,7 +432,7 @@
       "collectionId": "1",
       "id": 49,
       "needsReview": false,
-      "lastReviewTime": 1686105428119
+      "lastReviewTime": 1686887948910
     },
     {
       "question": "What is an algorithm?",
@@ -473,21 +478,27 @@
       "question": "What is included in an HTTP request? (three things)",
       "answer": "1. Headers\n2. HTTP verb\n3. URL",
       "collectionId": "9",
-      "id": 55
+      "id": 55,
+      "isArchived": false,
+      "needsReview": true,
+      "lastReviewTime": 1686888835350
     },
     {
       "question": "What is included in an HTTP response? (three things)",
       "answer": "1. Headers\n2. Status code\n3. Body",
       "collectionId": "9",
       "id": 56,
-      "needsReview": false,
-      "lastReviewTime": 1686105274025
+      "needsReview": true,
+      "lastReviewTime": 1686888833258,
+      "isArchived": false
     },
     {
       "question": "What function do you use to send an object of data in an HTTP request? ",
       "answer": "JSON.stringify(formData)",
       "collectionId": "9",
-      "id": 57
+      "id": 57,
+      "needsReview": false,
+      "lastReviewTime": 1686888817372
     },
     {
       "question": "Say we have a sendUpdate function that we want to use to send an account update to one of our customers (customer1). sendUpdate takes two arguments: the message text and the date. Which of the following shows the correct invocation of apply?",
@@ -649,26 +660,33 @@
       "question": "Can the onClick event handler be attached to any component in React?",
       "answer": "No, must be a clickable element like a button or div",
       "collectionId": "1",
-      "id": 80
+      "id": 80,
+      "needsReview": false,
+      "lastReviewTime": 1686887897020
     },
     {
       "question": "How can you update state with a sorted version of the data?",
       "answer": "You need to make a copy first, e.g. with slice or spread operator",
       "collectionId": "1",
-      "id": 81
+      "id": 81,
+      "needsReview": false,
+      "lastReviewTime": 1686887901823
     },
     {
       "question": "How do you import react router?",
       "answer": "import { BrowserRouter } from \"react-router-dom\";",
       "collectionId": "10",
-      "id": 82
+      "id": 82,
+      "needsReview": false,
+      "lastReviewTime": 1686888055472
     },
     {
       "question": "How do you setup an App component to use react router?",
       "answer": "<BrowserRouter>\n    <App />\n</BrowserRouter>",
       "collectionId": "10",
       "id": 83,
-      "needsReview": true
+      "needsReview": false,
+      "lastReviewTime": 1686888059380
     },
     {
       "question": "How do you setup routes in your App component?",
@@ -676,15 +694,15 @@
       "collectionId": "10",
       "id": 84,
       "needsReview": false,
-      "lastReviewTime": 1686105514749
+      "lastReviewTime": 1686888066298
     },
     {
       "question": "What are the 3 main props in the Route component?",
       "answer": "path, element, exact",
       "collectionId": "10",
       "id": 85,
-      "needsReview": true,
-      "lastReviewTime": 1686105403663
+      "needsReview": false,
+      "lastReviewTime": 1686888110576
     },
     {
       "question": "What does \"exact\" prop do in the Route component?",
@@ -692,7 +710,7 @@
       "collectionId": "10",
       "id": 86,
       "needsReview": false,
-      "lastReviewTime": 1686105243400
+      "lastReviewTime": 1686888091033
     },
     {
       "question": "How do you add a link that knows whether it's active or not?",
@@ -700,13 +718,15 @@
       "collectionId": "10",
       "id": 87,
       "needsReview": false,
-      "lastReviewTime": 1686105702264
+      "lastReviewTime": 1686888100262
     },
     {
       "question": "How do you create a link?",
       "answer": "<Link to=\"/profile\">Profile</Link>",
       "collectionId": "10",
-      "id": 88
+      "id": 88,
+      "needsReview": false,
+      "lastReviewTime": 1686888115357
     },
     {
       "question": "How do you get URL parameters with react router?",
@@ -714,26 +734,32 @@
       "collectionId": "10",
       "id": 89,
       "needsReview": false,
-      "lastReviewTime": 1686105540709
+      "lastReviewTime": 1686888088400
     },
     {
       "question": "How do you navigate programmatically in react router?",
       "answer": "useHistory hook",
       "collectionId": "10",
-      "id": 90
+      "id": 90,
+      "needsReview": false,
+      "lastReviewTime": 1686888117477,
+      "isArchived": true
     },
     {
       "question": "How do you use the useHistory hook?",
       "answer": "let history = useHistory();\nhistory.push(\"/home\");",
       "collectionId": "10",
-      "id": 91
+      "id": 91,
+      "needsReview": false,
+      "lastReviewTime": 1686888124073
     },
     {
       "question": "How do you use ReactDom?",
       "answer": "const root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n      <App />\n);",
       "collectionId": "1",
       "id": 92,
-      "needsReview": true
+      "needsReview": false,
+      "lastReviewTime": 1686887907754
     },
     {
       "question": "Can you nest <Route> components?",
@@ -741,27 +767,100 @@
       "collectionId": "10",
       "id": 93,
       "needsReview": false,
-      "lastReviewTime": 1686105706796
+      "lastReviewTime": 1686888122311
     },
     {
       "question": "How do Routes or Switch work?",
       "answer": "Only choose the single best match, starting from the first <Route> in the list",
       "collectionId": "10",
-      "id": 94
+      "id": 94,
+      "needsReview": false,
+      "lastReviewTime": 1686888062410
     },
     {
       "question": "How do you style active NavLink?",
       "answer": "Two ways:\n1. Has a built in active class \"active\"\n2. activeClassName=\"my-active-class\"\n3. Built in data\nclassName={({ isActive, isPending }) =>\n    isPending ? \"pending\" : isActive ? \"active\" : \"\"\n  }",
       "collectionId": "10",
       "id": 95,
-      "needsReview": true,
-      "lastReviewTime": 1686105228034
+      "needsReview": false,
+      "lastReviewTime": 1686888077162
     },
     {
       "question": "Why won't this work for key and how to fix it?\n\nconst key = e.target.name;\nconst val = e.target.value;\nsetForm(form => ({...form, key: val}));",
       "answer": "It will try to use the string \"key\" as the key. To fix change to [key]: val",
       "collectionId": "1",
-      "id": 96
+      "id": 96,
+      "needsReview": false,
+      "lastReviewTime": 1686887801435
+    },
+    {
+      "question": "What are the 3 types of python errors?",
+      "answer": "1. Syntax\n2. Logic\n3. Exceptions",
+      "collectionId": "11",
+      "id": 97
+    },
+    {
+      "question": "How do you install from the Pipfile?",
+      "answer": "pipenv install",
+      "collectionId": "11",
+      "id": 98
+    },
+    {
+      "question": "How do you run a shell for the pipenv?",
+      "answer": "pipenv shell",
+      "collectionId": "11",
+      "id": 99
+    },
+    {
+      "question": "How do you run pytest?",
+      "answer": "Two steps\n1. pipenv shell\n2. pytest",
+      "collectionId": "11",
+      "id": 100,
+      "needsReview": true
+    },
+    {
+      "question": "What keyword can you put in empty functions as placeholders?",
+      "answer": "pass",
+      "collectionId": "11",
+      "id": 101
+    },
+    {
+      "question": "What is an interpreter?",
+      "answer": "Program that executes other programs. Python requires one to be run. ",
+      "collectionId": "11",
+      "id": 102
+    },
+    {
+      "question": "What is unique about an exception error?",
+      "answer": "It can be predicted and handled without causing a crash",
+      "collectionId": "11",
+      "id": 103
+    },
+    {
+      "question": "How does Python define code blocks?",
+      "answer": "By indentation level",
+      "collectionId": "11",
+      "id": 104
+    },
+    {
+      "question": "What is 'ipdb'?",
+      "answer": "A REPL",
+      "collectionId": "11",
+      "id": 105
+    },
+    {
+      "question": "What is a REPL?",
+      "answer": "Interactive programming environment.\nRead, Evaluate, Print, Loop",
+      "collectionId": "11",
+      "id": 106
+    },
+    {
+      "question": "How do you use useNavigate hook?",
+      "answer": "let navigate = useNavigate();\nnavigate(\"/page\");",
+      "collectionId": "10",
+      "id": 107,
+      "needsReview": false,
+      "lastReviewTime": 1686888104754
     }
   ]
 }

@@ -24,7 +24,8 @@ function Review() {
           const needsReviewOrNew = (card.needsReview || card.needsReview === undefined);
           const notReviewedRecently = (card.lastReviewTime === undefined || card.lastReviewTime < Date.now() - timeRangeDays * daysInMillis);
           const matchesCollection = (collectionId !== undefined ? card.collectionId === collectionId : true);
-          return (needsReviewOrNew || notReviewedRecently) && matchesCollection;
+          const notArchived = (card.isArchived === false || card.isArchived === undefined)
+          return (needsReviewOrNew || notReviewedRecently) && matchesCollection && notArchived;
         });
         setCards(filteredCards.sort(() => Math.random() - 0.5));
         setTotCards(filteredCards.length)

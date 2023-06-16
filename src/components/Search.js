@@ -19,6 +19,10 @@ function Search() {
     setCards(cards => cards.map(c => c.id === updatedCard.id ? updatedCard : c));
   }
 
+  function handleArchive(updatedCard){
+    setCards(card => cards.map(c => c.id !== updatedCard.id ? c : updatedCard));
+  }
+
   return (
     <Layout>
       <Container style={{ marginBottom: '10px' }}>
@@ -28,7 +32,7 @@ function Search() {
         <Grid columns={numColumns} >
           {cards.map(card =>
             <Grid.Column key={card.id}>
-              <StudyCard card={card} onUpdateCard={handleUpdateCard} />
+              <StudyCard card={card} onUpdateCard={handleUpdateCard} onArchiveCard={handleArchive} />
             </Grid.Column>
           )}
         </Grid>

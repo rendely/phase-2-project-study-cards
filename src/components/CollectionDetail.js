@@ -18,7 +18,7 @@ function CollectionDetail() {
   function getCards() {
     fetch('http://localhost:3001/cards?collectionId=' + params.id)
       .then(r => r.json())
-      .then(cards => setCards(cards.filter(c => c.isArchived === false || c.isArchived === undefined)))
+      .then(cards => setCards(cards))
   }
 
   function getCollectionInfo() {
@@ -42,8 +42,8 @@ function CollectionDetail() {
     setCards(cards => cards.map(c => c.id === newCard.id ? newCard : c))
   }
 
-  function handleArchiveCard(id){
-    setCards(cards => cards.filter(c => c.id !== id))
+  function handleArchiveCard(updatedCard){
+    setCards(card => cards.map(c => c.id !== updatedCard.id ? c : updatedCard));
   }
 
   return (
