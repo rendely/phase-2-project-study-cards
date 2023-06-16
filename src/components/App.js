@@ -42,4 +42,5 @@ App
   - ReviewCard (list)
 - Search
   - StudyCard (list)
+- Home
 */
