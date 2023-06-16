@@ -52,7 +52,8 @@
       "collectionId": "1",
       "id": 1,
       "needsReview": false,
-      "lastReviewTime": 1686887809530
+      "lastReviewTime": 1686887809530,
+      "isArchived": false
     },
     {
       "question": "____ is the process of handling all the routing logic with JavaScript, without making any additional GET requests for some new HTML document.",
@@ -203,7 +204,9 @@
       "question": "What does GIT stand for?",
       "answer": "Global Information Tracker",
       "collectionId": "2",
-      "id": 20
+      "id": 20,
+      "needsReview": false,
+      "lastReviewTime": 1686889641918
     },
     {
       "question": "How do you push your code to the remote origin?",
@@ -211,13 +214,15 @@
       "collectionId": "2",
       "id": 21,
       "needsReview": false,
-      "lastReviewTime": 1686105437320
+      "lastReviewTime": 1686889641407
     },
     {
       "question": "How do you show a log of commits (bonus single line output per commit)?",
       "answer": "git log --oneline",
       "collectionId": "2",
-      "id": 22
+      "id": 22,
+      "needsReview": false,
+      "lastReviewTime": 1686889640932
     },
     {
       "question": "What does the -u do in this command:\ngit push -u origin main",
@@ -225,7 +230,7 @@
       "collectionId": "2",
       "id": 23,
       "needsReview": false,
-      "lastReviewTime": 1686105147471
+      "lastReviewTime": 1686889642449
     },
     {
       "question": "Fill in the blank on this description of the internet:\nPhysical layer -> ____ -> network layer -> transport layer -> session layer -> presentation layer -> Application layer",
@@ -861,6 +866,14 @@
       "id": 107,
       "needsReview": false,
       "lastReviewTime": 1686888104754
+    },
+    {
+      "question": "",
+      "answer": "",
+      "collectionId": "9",
+      "id": 108,
+      "needsReview": true,
+      "isArchived": true
     }
   ]
 }

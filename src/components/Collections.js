@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Container, Grid, Header, Icon, Modal } from 'semantic-ui-react'
-import Layout from './Layout'
 import CollectionCard from './CollectionCard';
 import CollectionForm from './CollectionForm';
 
@@ -48,8 +47,7 @@ function Collections() {
   }
 
   return (
-    <Layout>
-
+    <>
       <Modal
         basic
         onClose={() => setShowModal(false)}
@@ -91,7 +89,7 @@ function Collections() {
           </Grid.Column>
         </Grid>
       </Container>
-    </Layout >)
+    </>)
 }
 
 export default Collections

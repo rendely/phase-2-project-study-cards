@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Container, Grid } from 'semantic-ui-react'
-import Layout from './Layout'
 import StudyCardForm from './StudyCardForm'
 import StudyCard from './StudyCard'
 
@@ -35,33 +34,32 @@ function CollectionDetail() {
       body: JSON.stringify(formData)
     })
       .then(r => r.json())
-      .then(newCard => setCards(cards => [newCard,...cards]))
+      .then(newCard => setCards(cards => [newCard, ...cards]))
   }
 
-  function handleUpdateCard(newCard){
+  function handleUpdateCard(newCard) {
     setCards(cards => cards.map(c => c.id === newCard.id ? newCard : c))
   }
 
-  function handleArchiveCard(updatedCard){
+  function handleArchiveCard(updatedCard) {
     setCards(card => cards.map(c => c.id !== updatedCard.id ? c : updatedCard));
   }
 
   return (
-    <Layout collectionName={collectionName}>
-      <Container>
-        <h1>{collectionName}</h1>
-        <Grid columns={numColumns} >
-          <Grid.Column>
-            <StudyCardForm onSubmitCard={handleAddCard}  />
+    <Container>
+      <h1>{collectionName}</h1>
+      <Grid columns={numColumns} >
+        <Grid.Column>
+          <StudyCardForm onSubmitCard={handleAddCard} />
+        </Grid.Column>
+        {cards.map(card =>
+          <Grid.Column key={card.id}>
+            <StudyCard card={card} onUpdateCard={handleUpdateCard} onArchiveCard={handleArchiveCard} />
           </Grid.Column>
-          {cards.map(card =>
-            <Grid.Column key={card.id}>
-              <StudyCard card={card} onUpdateCard={handleUpdateCard} onArchiveCard={handleArchiveCard}/>
-            </Grid.Column>
-          )}
-        </Grid>
-      </Container>
-    </Layout>)
+        )}
+      </Grid>
+    </Container>
+  )
 }
 
 export default CollectionDetail

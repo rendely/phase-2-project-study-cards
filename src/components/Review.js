@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-import Layout from './Layout'
 import ReviewCard from './ReviewCard';
 import { Card, Container, Divider, Form, Grid, Progress } from 'semantic-ui-react'
 
@@ -10,8 +9,8 @@ function Review() {
   const [cards, setCards] = useState([]);
   const [totCards, setTotCards] = useState();
   const [numCompleted, setNumCompleted] = useState(0);
-  const {collectionId} = useParams();
-  const daysInMillis = 24*60*60*1000;
+  const { collectionId } = useParams();
+  const daysInMillis = 24 * 60 * 60 * 1000;
 
   const currentCard = cards[0];
   useEffect(loadCards, [timeRangeDays]);
@@ -47,14 +46,13 @@ function Review() {
       })
   }
 
-  function handleTimeChange(e, {value}){
+  function handleTimeChange(e, { value }) {
     setTimeRangeDays(value);
     document.activeElement.blur();
   }
 
   return (
-    <Layout>
-      <Container text textAlign='center'>
+    <Container text textAlign='center'>
       <Form>
         <Form.Group inline>
           <label>Show cards not reviewed in past:</label>
@@ -85,23 +83,23 @@ function Review() {
         </Form.Group>
         <Divider />
       </Form>
-        {numCompleted} / {totCards}
-        <Progress total={totCards} value={numCompleted} />
-        <Grid columns={1} centered>
-          <Grid.Column>
-            {currentCard ?
-              <ReviewCard card={currentCard} updateCard={updateCard} />
-              :
-              <Card fluid style={{ height: "100%" }}>
-                <Card.Content>
-                  Done! Congrats on completing your review!
-                </Card.Content>
-              </Card>
-            }
-          </Grid.Column>
-        </Grid>
-      </Container>
-    </Layout>)
+      {numCompleted} / {totCards}
+      <Progress total={totCards} value={numCompleted} />
+      <Grid columns={1} centered>
+        <Grid.Column>
+          {currentCard ?
+            <ReviewCard card={currentCard} updateCard={updateCard} />
+            :
+            <Card fluid style={{ height: "100%" }}>
+              <Card.Content>
+                Done! Congrats on completing your review!
+              </Card.Content>
+            </Card>
+          }
+        </Grid.Column>
+      </Grid>
+    </Container>
+  )
 }
 
 export default Review

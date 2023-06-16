@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Container, Menu } from 'semantic-ui-react'
 
-function Layout({ children, collectionName }) {
+function NavBar({ children }) {
   return (
     <Container>
       <Menu>
@@ -15,4 +15,4 @@ function Layout({ children, collectionName }) {
     </Container>)
 }
 
-export default Layout
+export default NavBar

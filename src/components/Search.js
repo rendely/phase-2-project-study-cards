@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Grid, Input } from 'semantic-ui-react'
-import Layout from './Layout'
 import StudyCard from './StudyCard'
 
 function Search() {
@@ -19,12 +18,12 @@ function Search() {
     setCards(cards => cards.map(c => c.id === updatedCard.id ? updatedCard : c));
   }
 
-  function handleArchive(updatedCard){
+  function handleArchive(updatedCard) {
     setCards(card => cards.map(c => c.id !== updatedCard.id ? c : updatedCard));
   }
 
   return (
-    <Layout>
+    <>
       <Container style={{ marginBottom: '10px' }}>
         Search: <Input name='search' value={search} onChange={(e) => setSearch(e.target.value)} />
       </Container>
@@ -37,8 +36,7 @@ function Search() {
           )}
         </Grid>
       </Container>
-    </Layout>
-  )
+    </>)
 }
 
 export default Search
