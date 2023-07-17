@@ -874,6 +874,54 @@
       "id": 108,
       "needsReview": true,
       "isArchived": true
+    },
+    {
+      "question": "Which array methods return a copy?",
+      "answer": "slice, map, filter",
+      "collectionId": "8",
+      "id": 109
+    },
+    {
+      "question": "Which array methods modify the original array?",
+      "answer": "sort, splice, push, pop, shift, unshift",
+      "collectionId": "8",
+      "id": 110
+    },
+    {
+      "question": "How do you add an item to a set?",
+      "answer": "set1 = set([1,2,3])\nset1.add(4)",
+      "collectionId": "11",
+      "id": 111
+    },
+    {
+      "question": "Use list comprehension to double each number in this list: my_list = [1,2,3]",
+      "answer": "[n*2 for n in my_list]",
+      "collectionId": "11",
+      "id": 112
+    },
+    {
+      "question": "How do you sum an array in Python?",
+      "answer": "Built in sum function: sum(my_array)",
+      "collectionId": "11",
+      "id": 113
+    },
+    {
+      "question": "How do you find the maximum value in an array?",
+      "answer": "max(my_array)",
+      "collectionId": "11",
+      "id": 114
+    },
+    {
+      "question": "What is a class?",
+      "answer": "Blueprint defining how to build an object",
+      "collectionId": "11",
+      "id": 115
+    },
+    {
+      "question": "What is an instance?",
+      "answer": "A new object based on a class",
+      "collectionId": "11",
+      "id": 116
     }
   ]
 }
