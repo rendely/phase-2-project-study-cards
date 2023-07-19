@@ -922,6 +922,12 @@
       "answer": "A new object based on a class",
       "collectionId": "11",
       "id": 116
+    },
+    {
+      "question": "In Python, what happens when you pass a mutable object (like a list) to a function? How does it affect the original object?",
+      "answer": "When a mutable object is passed to a function in Python, it is passed by reference, not by value. This means that if you modify the object within the function, the changes will persist after the function call, affecting the original object.\n\nParticularly important for recursive functions",
+      "collectionId": "11",
+      "id": 117
     }
   ]
 }
