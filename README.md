@@ -4,6 +4,11 @@
 
 Study Cards is a simple application that lets you create and practice with digital study cards, using the spaced repetition technique. With Study Cards, you can easily create a set of flashcards for any topic, and then use them to practice and reinforce your knowledge over time.
 
+## Testing
+
+`npm run server`
+`npm run start`
+
 ## Features
 
 - Create and manage multiple decks of study cards
